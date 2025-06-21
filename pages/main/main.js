@@ -1,15 +1,19 @@
-import logo from "./logo/main.js"
+import head from "./head/main.js"
+import home from "./home/main.js"
+import productsCategories from "./productsCategories/main.js"
 
 export default function main(){
     let style = `
         {
-            position:relative;
+            display:flex;
+            flex-direction:column;
+            align-items:center;
             width:100%;
-            height:100dvh;
-	        overflow:hidden;
         }`
 
     const main = cE("div", style)
-    main.appendChild(logo())
+    main.appendChild(head())
+    main.appendChild(home())
+    main.appendChild(productsCategories())
     return(main)
 }
