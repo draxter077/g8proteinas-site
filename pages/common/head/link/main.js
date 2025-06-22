@@ -27,6 +27,6 @@ export default function link(t, url){
 
     const link = cE("div", style)
     link.innerHTML = t
-    link.addEventListener("click", () => window.open(url, "_blank"))
+    link.addEventListener("click", () => window.open(url, "_self"))
     return(link)
 }

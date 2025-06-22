@@ -1,6 +1,8 @@
-import head from "./head/main.js"
+import head from "../common/head/main.js"
 import home from "./home/main.js"
-import productsCategories from "./productsCategories/main.js"
+import products from "./products/main.js"
+import about from "./about/main.js"
+import foot from "../common/foot/main.js"
 
 export default function main(){
     let style = `
@@ -14,6 +16,8 @@ export default function main(){
     const main = cE("div", style)
     main.appendChild(head())
     main.appendChild(home())
-    main.appendChild(productsCategories())
+    main.appendChild(products())
+    main.appendChild(about())
+    main.appendChild(foot())
     return(main)
 }

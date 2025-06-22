@@ -23,7 +23,7 @@ export default function background(){
         }
         @keyframes backgroundScroll{
             0%[opacity:1;transform:scale(1)]
-            100%[opacity:0.5;transform:scale(0.9)]
+            100%[opacity:0.5;transform:scale(0.8)]
         }
         :responsive{
             flex-direction:column;
