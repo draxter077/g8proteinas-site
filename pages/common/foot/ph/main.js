@@ -12,6 +12,7 @@ export default function ph(){
         }
         :responsive{
             margin:20px 0px 0px 0px;
+            font-size:12px;
         }`
 
     const ph = cE("div", style)

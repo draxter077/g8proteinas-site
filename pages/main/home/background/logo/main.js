@@ -5,7 +5,7 @@ export default function logo(){
         }
         :responsive{
             height:fit-content;
-            width:90%;
+            width:50%;
         }`
 
     const logo = cE("img", style)

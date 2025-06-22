@@ -9,6 +9,9 @@ export default function img(){
         }
         :hover{
             transform:scale(1.1);
+        }
+        :responsive{
+            height:30px;
         }`
 
     const img = cE("img", style)

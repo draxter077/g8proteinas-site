@@ -28,11 +28,11 @@ export default function slogan(){
             100%[width:100%;]
         }
         :responsive{
-            font-size:21px;
+            font-size:19px;
             width:90%;
         }`
 
     const slogan = cE("div", style)
-    slogan.innerHTML = "Com <span>atendimento exclusivo e garantia de qualidade</span>, fornecemos os melhores produtos para peixarias, restaurantes, churrascarias, hotéis e resorts ou atacados."
+    slogan.innerHTML = "Com <span>atendimento exclusivo e garantia de qualidade,</span>fornecemos os melhores produtos para peixarias, restaurantes, churrascarias, hotéis e resorts ou atacados."
     return(slogan)
 }

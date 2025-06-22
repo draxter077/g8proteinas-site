@@ -9,7 +9,7 @@ export default function home(){
             justify-content:center;
             align-items:center;
             width:100%;
-            height:100dvh;
+            height:100svh;
         }`
 
     const home = cE("div", style)

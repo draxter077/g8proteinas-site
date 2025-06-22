@@ -7,7 +7,7 @@ export default function text(){
             margin:7.5vh 0px 0px 0px;
         }
         :responsive{
-            font-size:21px;
+            font-size:18px;
             width:90%;
         }`
 

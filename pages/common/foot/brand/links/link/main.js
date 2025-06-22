@@ -8,6 +8,9 @@ export default function link(src, url){
         }
         :hover{
             transform:scale(1.1);
+        }
+        :responsive{
+            height:30px;
         }`
 
     const link = cE("img", style)
