@@ -1,4 +1,5 @@
 import main from "./pages/main/main.js"
+import products from "./pages/products/main.js"
 
 window.cE = function cE(t, stl){
     function addClass(){
@@ -135,8 +136,12 @@ window.construct = function construct(p){
     if(p == undefined){
         if(window.location.href.split("br/")[1] != undefined && window.location.href.split("br/")[1] != ""){
             let paths = window.location.href.split("br/")[1].split("/")
-            //if(paths[0] == "teste"){}
-            root.innerHTML = paths
+            if(paths[0] == "produtos"){
+                root.appendChild(products(paths[0].split("?")[1]))
+            }
+            else{
+                root.appendChild(main())
+            }
         }
         else{
             root.appendChild(main())
@@ -203,7 +208,7 @@ cE("root", `html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquo
     	margin:0px;
     }
     ::-webkit-scrollbar-thumb{
-        background:var(--colorBlack);
+        background:var(--colorBlue);
         border-radius:20px;
     }
     ::-webkit-scrollbar-button{

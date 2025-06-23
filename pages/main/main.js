@@ -1,4 +1,4 @@
-import head from "../common/head/main.js"
+import head from "./head/main.js"
 import home from "./home/main.js"
 import products from "./products/main.js"
 import about from "./about/main.js"
