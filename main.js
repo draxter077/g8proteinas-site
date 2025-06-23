@@ -136,7 +136,7 @@ window.construct = function construct(p){
     if(p == undefined){
         if(window.location.href.split("br/")[1] != undefined && window.location.href.split("br/")[1] != ""){
             let paths = window.location.href.split("br/")[1].split("/")
-            if(paths[0] == "produtos"){
+            if(paths[0] == "produtos" || paths[0].split("?")[0] == "produtos"){
                 root.appendChild(products(paths[0].split("?")[1]))
             }
             else{
