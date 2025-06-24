@@ -3,6 +3,8 @@ import title from "./title/main.js"
 import price from "./price/main.js"
 import button from "./button/main.js"
 
+import window from "./window/main.js"
+
 export default function product(p){
     let style = `
         {
@@ -20,13 +22,14 @@ export default function product(p){
             transition:transform 0.5s;
         }
         :hover{
-            transform:scale(1.02);
+            transform:scale(1.02) !important;
         }
         :responsive{
             height:33svh;
         }`
 
     const product = cE("div", style)
+    product.id = 0
     product.appendChild(img("https://png.pngtree.com/png-clipart/20230928/original/pngtree-slice-of-salmon-fillet-png-image_13009822.png"))
     product.appendChild(title("Salmão verde azul lilás branco vindo direto do Chile ou de algum lugar melhor ótimo sabor eu recomendo rsrsrsr muito bom mesmo"))
     product.appendChild(price("R$ 50,00/kg"))
@@ -34,7 +37,7 @@ export default function product(p){
     product.addEventListener(
         "click",
         function a(){
-            
+            document.getElementById("root").appendChild(window())
         }
     )
     return(product)

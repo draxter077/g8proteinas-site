@@ -6,6 +6,7 @@ export default function title(t){
             border-bottom:1px solid var(--colorBlue);
             width:100%;
             padding:0px 5px;
+            margin:0px 0px 20px 0px;
         }
         :responsive{
             font-size:18px;

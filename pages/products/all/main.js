@@ -1,6 +1,7 @@
 import head from "./head/main.js"
+import content from "./content/main.js"
 
-export default function all(pdts){
+export default function all(id, pdts){
     let style = `
         {
             display:flex;
@@ -11,5 +12,6 @@ export default function all(pdts){
 
     const all = cE("div", style)
     all.appendChild(head())
+    all.appendChild(content(id, pdts))
     return(all)
 }
