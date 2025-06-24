@@ -1,5 +1,6 @@
 import head from "./head/main.js"
 import section from "./section/main.js"
+import all from "./all/main.js"
 import foot from "../common/foot/main.js"
 
 export default function products(id){
@@ -13,10 +14,10 @@ export default function products(id){
         }`
 
     const products = cE("div", style)
-    alert(id)
     products.appendChild(head())
     products.appendChild(section("Mais vendidos", [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]))
     products.appendChild(section("Novos produtos", [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]))
+    products.appendChild(all([0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,]))
     products.appendChild(foot())
     return(products)
 }
