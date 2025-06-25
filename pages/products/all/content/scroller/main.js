@@ -14,7 +14,7 @@ export default function scroller(id, pdts){
     for(let i = 0; i < pdts.length; i++){scroller.appendChild(product(pdts[i]))}
 
     window.addEventListener(
-        "loadstart",
+        "load",
         function a(){
             if(id != undefined){
                 for(let i = 0; i < scroller.children.length; i++){
