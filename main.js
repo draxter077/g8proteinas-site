@@ -144,7 +144,7 @@ window.construct = function construct(p){
             }
         }
         else{
-            root.appendChild(products(0))
+            root.appendChild(main())
         }
     }
 }

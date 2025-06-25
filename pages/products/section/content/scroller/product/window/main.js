@@ -1,5 +1,8 @@
 import head from "./head/main.js"
-import content from "./content/main.js"
+import photos from "./photos/main.js"
+import title from "./title/main.js"
+import price from "./price/main.js"
+import button from "./button/main.js"
 
 export default function window(t, src, p){
     let style = `
@@ -10,6 +13,7 @@ export default function window(t, src, p){
 
             display:flex;
             flex-direction:column;
+            justify-content:space-between;
             align-items:center;
             width:80%;
             height:80%;
@@ -21,6 +25,9 @@ export default function window(t, src, p){
 
     const window = cE("div", style)
     window.appendChild(head())
-    window.appendChild(content())
+    window.appendChild(photos())
+    window.appendChild(title())
+    window.appendChild(price())
+    window.appendChild(button())
     return(window)
 }
