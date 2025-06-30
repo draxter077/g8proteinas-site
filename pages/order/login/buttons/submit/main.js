@@ -10,5 +10,9 @@ export default function submit(){
 
     const submit = cE("div", style)
     submit.innerHTML = "Entrar"
+    submit.addEventListener(
+        "click",
+        () => construct({page:"order", data:{id:123}})
+    )
     return(submit)
 }

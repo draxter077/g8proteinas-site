@@ -14,14 +14,6 @@ export default function login(){
         }`
 
     const login = cE("div", style)
-    //construct(
-    //    {
-    //        page:"order", 
-    //        data:{
-    //            id:123
-    //        }
-    //    }
-    //)
     login.appendChild(logo())
     login.appendChild(forms())
     login.appendChild(buttons())

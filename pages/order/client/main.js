@@ -1,3 +1,6 @@
+import head from "./head/main.js"
+import config from "./config/main.js"
+
 export default function client(log){
     let style = `
         {
@@ -8,5 +11,7 @@ export default function client(log){
         }`
 
     const client = cE("div", style)
+    client.appendChild(head())
+    client.appendChild(config())
     return(client)
 }

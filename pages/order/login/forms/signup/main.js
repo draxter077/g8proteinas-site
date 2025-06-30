@@ -11,5 +11,7 @@ export default function signup(){
     const signup = cE("div", style)
     signup.appendChild(input("Nome da empresa"))
     signup.appendChild(input("Nome do responsável"))
+    signup.appendChild(input("Email"))
+    signup.appendChild(input("Telefone"))
     return(signup)
 }
