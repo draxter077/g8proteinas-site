@@ -3,9 +3,11 @@ export default function cnpj(){
         {
             font-size:15px;
             color:var(--colorWhite);
+            user-select:text;
         }
         :responsive{
             font-size:11px;
+            order:2;
         }`
 
     const cnpj = cE("div", style)

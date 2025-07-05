@@ -9,10 +9,8 @@ export default function brand(){
             flex-direction:row;
             justify-content:space-around;
             align-items:center;
+            flex-wrap:wrap;
             width:90%;
-        }
-        :responsive{
-            flex-direction:column;
         }`
 
     const brand = cE("div", style)

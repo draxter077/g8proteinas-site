@@ -148,7 +148,7 @@ window.construct = function construct(p){
             }
         }
         else{
-            root.appendChild(order())
+            root.appendChild(main())
         }
     }
     else{

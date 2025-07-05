@@ -7,19 +7,20 @@ export default function background(){
             position:fixed;
             top:0%;
             left:0%;
+
             display:flex;
             flex-direction:row;
             justify-content:center;
             align-items:center;
             width:100%;
-            height:100%;
+            height:100svh;
             background:var(--colorOrange);
             z-index:-1;
 
             animation:backgroundScroll 1s linear 0s 1 forwards;
             animation-timeline:scroll();
             animation-range-start:0%;
-            animation-range-end:100vh;
+            animation-range-end:100svh;
         }
         @keyframes backgroundScroll{
             0%[opacity:1;transform:scale(1)]

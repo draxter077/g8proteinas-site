@@ -10,10 +10,15 @@ export default function home(){
             align-items:center;
             width:100%;
             height:100svh;
+            opacity:0;
+            transition:opacity 0.5s;
         }`
 
     const home = cE("div", style)
     home.appendChild(background())
     home.appendChild(arrow())
+
+    window.addEventListener("load", () => home.style.opacity = 1)
+
     return(home)
 }

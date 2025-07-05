@@ -1,5 +1,6 @@
 import photos from "./photos/main.js"
 import text from "./text/main.js"
+import contact from "./contact/main.js"
 
 export default function about(){
     let style = `
@@ -15,5 +16,6 @@ export default function about(){
     const about = cE("div", style)
     about.appendChild(photos())
     about.appendChild(text())
+    about.appendChild(contact())
     return(about)
 }

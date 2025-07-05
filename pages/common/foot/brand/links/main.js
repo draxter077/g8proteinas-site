@@ -10,12 +10,12 @@ export default function links(){
             width:10%;
         }
         :responsive{
-            width:30%;
-            margin:20px 0px 0px 0px;
+            width:40%;
         }`
 
     const links = cE("div", style)
     links.appendChild(link("./assets/elements/whatsapp.png", ""))
     links.appendChild(link("./assets/elements/instagram.png", ""))
+    links.appendChild(link("./assets/elements/mail.png", ""))
     return(links)
 }
