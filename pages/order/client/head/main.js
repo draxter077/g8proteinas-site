@@ -5,9 +5,6 @@ import logout from "./logout/main.js"
 export default function head(){
     let style = `
         {
-            position:sticky;
-            top:0px;
-            left:0px;
             display:flex;
             flex-direction:row;
             align-items:center;

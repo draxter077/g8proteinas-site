@@ -8,9 +8,21 @@ export default function config(){
         }
         :hover{
             transform:rotate(90deg);
+        }
+        :responsive{
+            height:20px;
         }`
 
     const config = cE("img", style)
     config.src = "./assets/elements/config.png"
+
+    config.addEventListener(
+        "click",
+        function a(e){
+            let confDiv = e.target.parentElement.parentElement.children[1]
+            if(confDiv.style.maxHeight == "1000px"){confDiv.style.maxHeight = "0px"}
+            else{confDiv.style.maxHeight = "1000px"}
+        }
+    )
     return(config)
 }

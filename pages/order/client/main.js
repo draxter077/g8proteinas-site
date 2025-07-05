@@ -1,5 +1,7 @@
 import head from "./head/main.js"
 import config from "./config/main.js"
+import orders from "./orders/main.js"
+import foot from "../../common/foot/main.js"
 
 export default function client(log){
     let style = `
@@ -12,6 +14,8 @@ export default function client(log){
 
     const client = cE("div", style)
     client.appendChild(head())
-    client.appendChild(config())
+    client.appendChild(config(log.user))
+    client.appendChild(orders(log))
+    client.appendChild(foot())
     return(client)
 }

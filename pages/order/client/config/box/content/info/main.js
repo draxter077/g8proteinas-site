@@ -8,6 +8,9 @@ export default function info(){
             justify-content:space-between;
             flex-wrap:wrap;
             width:100%;
+        }
+        :responsive{
+            flex-direction:column;
         }`
 
     const info = cE("div", style)

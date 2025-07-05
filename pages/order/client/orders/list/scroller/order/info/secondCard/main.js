@@ -1,19 +1,19 @@
-export default function logout(){
+export default function secondCard(id){
     let style = `
         {
-            height:29px;
+            height:25px;
             filter:invert(1);
             transition:transform 0.5s;
             cursor:pointer;
         }
         :hover{
-            transform:translateX(20%);
+            transform:scale(1.1);
         }
         :responsive{
             height:20px;
         }`
 
-    const logout = cE("img", style)
-    logout.src = "./assets/elements/logout.png"
-    return(logout)
+    const secondCard = cE("img", style)
+    secondCard.src = "./assets/elements/secondCard.png"
+    return(secondCard)
 }
