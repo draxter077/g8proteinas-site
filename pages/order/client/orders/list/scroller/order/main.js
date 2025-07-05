@@ -1,7 +1,7 @@
 import info from "./info/main.js"
 import items from "./items/main.js"
 
-export default function order(o){
+export default function order(o, pdts){
     let style = `
         {
             display:flex;
@@ -14,6 +14,6 @@ export default function order(o){
 
     const order = cE("div", style)
     order.appendChild(info(o))
-    order.appendChild(items(o.items))
+    order.appendChild(items(o.items, pdts))
     return(order)
 }

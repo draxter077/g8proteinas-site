@@ -1,6 +1,6 @@
 import scroller from "./scroller/main.js"
 
-export default function list(orders){
+export default function list(orders, products){
     let style = `
         {
             height:80svh;
@@ -10,6 +10,6 @@ export default function list(orders){
         }`
 
     const list = cE("div", style)
-    list.appendChild(scroller(orders))
+    list.appendChild(scroller(orders, products))
     return(list)
 }

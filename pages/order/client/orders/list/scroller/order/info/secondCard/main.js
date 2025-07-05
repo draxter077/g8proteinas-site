@@ -14,6 +14,7 @@ export default function secondCard(id){
         }`
 
     const secondCard = cE("img", style)
+    secondCard.title = "Emitir segunda via do boleto"
     secondCard.src = "./assets/elements/secondCard.png"
     return(secondCard)
 }

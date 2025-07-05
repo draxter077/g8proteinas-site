@@ -226,4 +226,24 @@ cE("root", `html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquo
         margin:0px;
     }`)
     
+window.stringifyNumber = function stringifyNumber(n){
+    let numberParts = n.toString().split(".")
+    let integerPart = numberParts[0]
+    integerPart = integerPart.split("").reverse().join(""); // 1234 => 4321, para ficar mais fácil adicionar os pontos nas centenas
+    let newIntegerPart = "", newFractionalPart = ""    
+    
+    for(let i = 0; i < integerPart.length; i++){
+        newIntegerPart += integerPart[i]
+        if((i + 1)%3 == 0 && i != integerPart.length - 1 && n > 0){newIntegerPart += "."}
+    }
+
+    if(numberParts.length > 1){ // Verifica se há casa decimal
+        newFractionalPart = (Math.floor(Number("0." + numberParts[1])*100)).toString() // Formata para dois algarismos significativos
+        if(newFractionalPart.length == 1){newFractionalPart = "0" + newFractionalPart} // Adciona o zero a esquerda caso menor do que 10
+    }
+    else{newFractionalPart = "00"} // Não havendo, atribui 00
+    
+    return(`R$ ${newIntegerPart.split("").reverse().join("")},${newFractionalPart}`)
+}
+
 construct()

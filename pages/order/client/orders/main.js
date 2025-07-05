@@ -13,6 +13,6 @@ export default function orders(data){
 
     const orders = cE("div", style)
     orders.appendChild(head(data.user.id, data.products))
-    orders.appendChild(list(data.orders))
+    orders.appendChild(list(data.orders, data.products))
     return(orders)
 }

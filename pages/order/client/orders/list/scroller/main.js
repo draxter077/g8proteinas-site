@@ -1,6 +1,6 @@
 import order from "./order/main.js"
 
-export default function scroller(orders){
+export default function scroller(orders, products){
     let style = `
         {
             display:flex;
@@ -10,6 +10,6 @@ export default function scroller(orders){
         }`
 
     const scroller = cE("div", style)
-    for(let i = 0; i < orders.length; i++){scroller.appendChild(order(orders[i]))}
+    for(let i = 0; i < orders.length; i++){scroller.appendChild(order(orders[i], products))}
     return(scroller)
 }
