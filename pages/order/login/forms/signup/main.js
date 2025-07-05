@@ -1,17 +1,17 @@
-import input from "../input/main.js"
+import content from "./content/main.js"
 
 export default function signup(){
     let style = `
         {
-            display:flex;
-            flex-direction:column;
             width:100%;
+            height:fit-content;
+
+            max-height:0px;
+            overflow:hidden;
+            transition:max-height 0.5s;
         }`
 
     const signup = cE("div", style)
-    signup.appendChild(input("Nome da empresa"))
-    signup.appendChild(input("Nome do responsável"))
-    signup.appendChild(input("Email"))
-    signup.appendChild(input("Telefone"))
+    signup.appendChild(content())
     return(signup)
 }

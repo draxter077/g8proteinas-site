@@ -8,7 +8,7 @@ export default function content(id, pdts){
             overflow-x:scroll;
         }
         :responsive{
-            height:890px;
+            height:110svh;
         }`
 
     const content = cE("div", style)

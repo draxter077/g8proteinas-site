@@ -5,6 +5,9 @@ export default function order(log){
     let style = `
         {
             width:100%;
+
+            opacity:0;
+            transition:opacity 0.5s;
         }`
 
     const order = cE("div", style)
@@ -15,5 +18,7 @@ export default function order(log){
     else{
         order.appendChild(client(log))
     }
+
+    window.addEventListener("load", () => order.style.opacity = 1)
     return(order)
 }

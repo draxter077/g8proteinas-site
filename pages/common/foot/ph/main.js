@@ -11,7 +11,8 @@ export default function ph(){
             color:var(--colorWhite);
         }
         :responsive{
-            margin:20px 0px 0px 0px;
+            margin:10px 0px 0px 0px;
+            padding:0px 0px 10px 0px;
             font-size:12px;
         }`
 

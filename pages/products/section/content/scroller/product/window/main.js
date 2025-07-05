@@ -10,6 +10,7 @@ export default function window(p){
             position:fixed;
             top:10%;
             left:10%;
+            z-index:2;
 
             display:flex;
             flex-direction:column;

@@ -4,7 +4,7 @@ export default function logo(){
             height:100px;
         }
         :responsive{
-            width:50%;
+            width:40%;
             height:fit-content;
         }`
 

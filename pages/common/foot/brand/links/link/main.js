@@ -10,7 +10,7 @@ export default function link(src, url){
             filter:invert(0.4);
         }
         :responsive{
-            height:30px;
+            height:27px;
         }`
 
     const link = cE("img", style)
