@@ -7,6 +7,7 @@ export default function float(f){
         }
         :responsive{
             font-size:18px;
+            margin:2px 0px 0px 0px;
         }`
 
     const float = cE("div", style)

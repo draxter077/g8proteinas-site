@@ -7,6 +7,7 @@ export default function currency(){
         }
         :responsive{
             font-size:20px;
+            margin:9px 5px 0px 0px;
         }`
 
     const currency = cE("div", style)

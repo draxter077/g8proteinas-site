@@ -12,6 +12,9 @@ export default function category(src, t){
         }
         :hover{
             background:var(--colorWhite);
+        }
+        :responsive{
+            height:40px;
         }`
 
     const category = cE("img", style)

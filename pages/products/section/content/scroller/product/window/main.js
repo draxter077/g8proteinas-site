@@ -20,10 +20,17 @@ export default function window(p){
             background:var(--colorWhite);
             border-radius:5px;
             padding:20px;
-            box-shadow:0px 0px 5px 0px var(--colorBlack);
+            box-shadow:0px 0px 500px 0px var(--colorBlack);
 
             transform:translateX(-200%);
             transition:transform 0.5s;
+        }
+        :responsive{
+            top:2.5%;
+            left:2.5%;
+
+            width:95%;
+            height:95%;
         }`
 
     const window = cE("div", style)

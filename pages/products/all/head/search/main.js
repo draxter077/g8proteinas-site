@@ -11,6 +11,11 @@ export default function search(){
         ::placeholder{
             font-style:italic;
             color:var(--colorWhite);
+        }
+        :responsive{
+            margin:0px 0px 10px 0px;
+            width:80%;
+            font-size:18px;
         }`
 
     const search = cE("input", style)
