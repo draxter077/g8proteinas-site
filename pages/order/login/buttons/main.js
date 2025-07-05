@@ -9,6 +9,9 @@ export default function buttons(){
             justify-content:space-between;
             align-items:center;
             width:25%;
+        }
+        :responsive{
+            width:75%;
         }`
 
     const buttons = cE("div", style)

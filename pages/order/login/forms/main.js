@@ -9,6 +9,9 @@ export default function forms(){
             align-items:center;
             width:30%;
             padding:5vh;
+        }
+        :responsive{
+            width:100%;
         }`
     
     const forms = cE("div", style)
