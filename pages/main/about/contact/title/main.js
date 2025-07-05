@@ -1,7 +1,7 @@
 export default function contact(){
     let style = `
         {
-            font-size:30px;
+            font-size:31px;
             color:var(--colorWhite);
             padding:0px 5px;
             border-bottom:1px solid var(--colorBlue);
@@ -9,7 +9,7 @@ export default function contact(){
             width:100%;
         }
         :responsive{
-            font-size:24px;
+            font-size:23px;
         }`
 
     const title = cE("div", style)

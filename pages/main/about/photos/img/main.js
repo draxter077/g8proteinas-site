@@ -4,7 +4,7 @@ export default function img(src){
             width:18%;
             aspect-ratio:1;
             border-radius:10px;
-            background:white;
+            box-shadow:0px 0px 2px 0px var(--colorBlue);
         }
         :responsive{
             width:49%;

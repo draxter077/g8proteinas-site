@@ -3,10 +3,10 @@ export default function title(t){
         {
             font-size:24px;
             color:var(--colorWhite);
-            border-bottom:1px solid var(--colorBlue);
-            width:100%;
-            padding:0px 5px;
-            margin:0px 0px 20px 0px;
+            border-right:1px solid var(--colorBlue);
+            border-left:1px solid var(--colorBlue);
+            padding:0px 10px;
+            margin:0px 0px 10px 0px;
         }
         :responsive{
             font-size:18px;

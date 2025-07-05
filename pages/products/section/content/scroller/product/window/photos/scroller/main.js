@@ -1,6 +1,6 @@
 import photo from "./photo/main.js"
 
-export default function scroller(){
+export default function scroller(srcs){
     let style = `
         {
             display:flex;
@@ -8,11 +8,7 @@ export default function scroller(){
         }`
 
     const scroller = cE("div", style)
-    scroller.appendChild(photo())
-    scroller.appendChild(photo())
-    scroller.appendChild(photo())
-    scroller.appendChild(photo())
-    scroller.appendChild(photo())
-    scroller.appendChild(photo())
+
+    for(let i = 0; i < srcs.length; i++){scroller.appendChild(photo(srcs[i]))}
     return(scroller)
 }

@@ -1,7 +1,6 @@
 import img from "./img/main.js"
 import title from "./title/main.js"
 import price from "./price/main.js"
-import button from "./button/main.js"
 
 import window from "./window/main.js"
 
@@ -29,15 +28,18 @@ export default function product(p){
         }`
 
     const product = cE("div", style)
-    product.id = 0
-    product.appendChild(img("https://png.pngtree.com/png-clipart/20230928/original/pngtree-slice-of-salmon-fillet-png-image_13009822.png"))
-    product.appendChild(title("Salmão verde azul lilás branco vindo direto do Chile ou de algum lugar melhor ótimo sabor eu recomendo rsrsrsr muito bom mesmo"))
-    product.appendChild(price("R$ 50,00/kg"))
-    //product.appendChild(button())
+    product.id = p.id
+    product.appendChild(img(p.srcs[0]))
+    product.appendChild(title(p.title))
+    product.appendChild(price(p.price))
+
     product.addEventListener(
         "click",
-        function a(){
-            document.getElementById("root").appendChild(window())
+        async function a(){
+            let w = window(p)
+            document.getElementById("root").appendChild(w)
+            await new Promise(resolve => setTimeout(resolve, 100))
+            w.style.transform = "translateX(0%)"
         }
     )
     return(product)

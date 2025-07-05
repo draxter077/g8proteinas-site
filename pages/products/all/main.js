@@ -7,7 +7,7 @@ export default function all(id, pdts){
             display:flex;
             flex-direction:column;
             width:90%;
-            margin:7.5vh 0px;
+            margin:15vh 0px;
         }`
 
     const all = cE("div", style)

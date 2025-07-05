@@ -4,6 +4,7 @@ export default function title(t){
             font-size:23px;
             color:var(--colorWhite);
             user-select:all;
+            text-align:center;
         }
         :responsive{
             font-size:18px;

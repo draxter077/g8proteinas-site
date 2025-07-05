@@ -11,7 +11,7 @@ export default function title(){
         }
         :responsive{
             font-size:23px;
-            width:95%;
+            width:90%;
         }`
 
     const title = cE("div", style)

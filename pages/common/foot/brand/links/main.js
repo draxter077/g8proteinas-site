@@ -7,7 +7,7 @@ export default function links(){
             flex-direction:row;
             justify-content:space-between;
             align-items:center;
-            width:10%;
+            width:15%;
         }
         :responsive{
             width:40%;

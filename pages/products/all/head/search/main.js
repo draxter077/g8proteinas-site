@@ -2,7 +2,7 @@ export default function search(){
     let style = `
         {
             font-size:20px;
-            width:100%;
+            width:50%;
             height:fit-content;
             padding:5px 10px;
             border-bottom:1px solid var(--colorBlue);
@@ -14,7 +14,7 @@ export default function search(){
         }`
 
     const search = cE("input", style)
-    search.placeholder = "Pesquise em todos os produtos..."
+    search.placeholder = "Pesquise aqui..."
 
     search.addEventListener(
         "input",
@@ -23,7 +23,7 @@ export default function search(){
             let term = e.target.value
             for(let i = 0; i < products.length; i++){
                 let title = products[i].children[1].innerHTML
-                if(!title.includes(term)){
+                if(!title.toLowerCase().includes(term.toLowerCase())){
                     products[i].style.display = "none"
                 }
                 else{

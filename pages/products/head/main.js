@@ -15,7 +15,7 @@ export default function head(){
         }`
 
     const head = cE("div", style)
-    head.appendChild(link("Produtos", "/produtos"))
+    head.appendChild(link("Início", "/"))
     head.appendChild(logo())
     head.appendChild(link("Pedidos", "/pedidos"))
     return(head)

@@ -4,7 +4,7 @@ import title from "./title/main.js"
 import price from "./price/main.js"
 import button from "./button/main.js"
 
-export default function window(t, src, p){
+export default function window(p){
     let style = `
         {
             position:fixed;
@@ -20,14 +20,17 @@ export default function window(t, src, p){
             background:var(--colorWhite);
             border-radius:5px;
             padding:20px;
-            box-shadow:0px 0px 5px 0px var(--colorBlue);
+            box-shadow:0px 0px 5px 0px var(--colorBlack);
+
+            transform:translateX(-200%);
+            transition:transform 0.5s;
         }`
 
     const window = cE("div", style)
     window.appendChild(head())
-    window.appendChild(photos())
-    window.appendChild(title())
-    window.appendChild(price())
+    window.appendChild(photos(p.srcs))
+    window.appendChild(title(p.title))
+    window.appendChild(price(p.price))
     window.appendChild(button())
     return(window)
 }

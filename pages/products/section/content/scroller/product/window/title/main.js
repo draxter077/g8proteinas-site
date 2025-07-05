@@ -1,11 +1,14 @@
-export default function title(){
+export default function title(t){
     let style = `
         {
-            font-size:23px;
+            font-size:30px;
             color:var(--colorBlack);
+        }
+        :responsive{
+            font-size:20px;
         }`
 
     const title = cE("div", style)
-    title.innerHTML = "Salmão verde azul lilás branco vindo direto do Chile ou de algum lugar melhor ótimo sabor eu recomendo rsrsrsr muito bom mesmo"
+    title.innerHTML = t
     return(title)
 }

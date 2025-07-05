@@ -7,7 +7,7 @@ export default function head(){
             display:flex;
             flex-direction:row;
             align-items:center;
-            justify-content:space-between;
+            justify-content:center;
             width:100%;
             margin:0px 0px 10px 0px;
         }`

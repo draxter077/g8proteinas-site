@@ -4,10 +4,10 @@ export default function link(src, url){
             height:40px;
             filter:invert(1);
             cursor:pointer;
-            transition:transform 0.5s;
+            transition:filter 0.5s;
         }
         :hover{
-            transform:scale(1.1);
+            filter:invert(0.4);
         }
         :responsive{
             height:30px;

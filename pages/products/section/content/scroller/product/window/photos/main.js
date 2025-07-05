@@ -1,6 +1,6 @@
 import scroller from "./scroller/main.js"
 
-export default function photos(){
+export default function photos(srcs){
     let style = `
         {
             width:100%;
@@ -8,6 +8,6 @@ export default function photos(){
         }`
 
     const photos = cE("div", style)
-    photos.appendChild(scroller())
+    photos.appendChild(scroller(srcs))
     return(photos)
 }

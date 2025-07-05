@@ -1,4 +1,4 @@
-export default function photo(){
+export default function photo(src){
     let style = `
         {
             height:30vh;
@@ -7,6 +7,6 @@ export default function photo(){
         }`
 
     const photo = cE("img", style)
-    photo.src = "https://png.pngtree.com/png-clipart/20230928/original/pngtree-slice-of-salmon-fillet-png-image_13009822.png"
+    photo.src = src
     return(photo)
 }

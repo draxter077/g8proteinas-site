@@ -10,7 +10,7 @@ export default function scroller(pdts){
 
     const scroller = cE("div", style)
 
-    for(let i = 0; i < pdts.length; i++){scroller.appendChild(product())}
+    for(let i = 0; i < pdts.length; i++){scroller.appendChild(product(pdts[i]))}
 
     return(scroller)
 }

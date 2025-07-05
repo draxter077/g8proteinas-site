@@ -6,7 +6,7 @@ export default function section(t, pdts){
         {
             display:flex;
             flex-direction:column;
-            align-items:center;
+            align-items:flex-start;
             width:90%;
             margin:5vh 0px 0px 0px;
         }`
