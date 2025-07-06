@@ -12,6 +12,7 @@ export default function item(i, pdts){
             color:var(--colorWhite);
             padding:5px 10px;
             width:100%;
+            cursor:pointer;
         }
         :responsive{
             font-size:12px;
@@ -32,5 +33,6 @@ export default function item(i, pdts){
 
     item.appendChild(img(src))
     item.appendChild(title(t, q, price))
+    item.addEventListener("click", () => window.open(`/produtos?${i.id}`, "_blank"))
     return(item)
 }
