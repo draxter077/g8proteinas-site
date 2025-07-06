@@ -6,7 +6,9 @@ export default function box(items, pdts){
             display:flex;
             flex-direction:column;
             width:100%;
-            padding:10px 0px;
+            margin:10px 0px 5px 0px;
+            border-left:1px solid var(--colorOrange);
+            border-right:1px solid var(--colorOrange);
         }`
 
     const box = cE("div", style)
