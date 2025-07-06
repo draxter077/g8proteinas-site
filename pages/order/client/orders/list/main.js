@@ -5,7 +5,6 @@ export default function list(orders, products){
         {
             height:80svh;
             width:100%;
-            border:1px solid red;
             overflow-y:scroll;
         }`
 

@@ -12,7 +12,7 @@ export default function order(log){
     const order = cE("div", style)
     if(log == undefined){
         order.appendChild(login())
-        let log = {
+        log = {
             user:{
                 id:0,
                 cnpj:"12.123.123/0001-12",

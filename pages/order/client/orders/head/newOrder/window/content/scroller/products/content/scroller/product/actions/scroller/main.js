@@ -1,0 +1,17 @@
+import select from "./select/main.js"
+import quantity from "./quantity/main.js"
+
+export default function scroller(){
+    let style = `
+        {
+            display:flex;
+            flex-direction:row;
+            width:200%;
+            transition:transform 0.5s;
+        }`
+
+    const scroller = cE("div", style)
+    scroller.appendChild(select())
+    scroller.appendChild(quantity())
+    return(scroller)
+}

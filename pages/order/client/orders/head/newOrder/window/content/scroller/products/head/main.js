@@ -1,23 +1,22 @@
 import search from "./search/main.js"
-import newOrder from "./newOrder/main.js"
+import categories from "./categories/main.js"
 
-export default function head(id, products){
+export default function head(){
     let style = `
         {
             display:flex;
             flex-direction:row;
-            justify-content:center;
             align-items:center;
-            width:80%;
+            justify-content:center;
+            width:100%;
             margin:0px 0px 10px 0px;
         }
         :responsive{
             flex-direction:column;
-            width:90%;
         }`
 
     const head = cE("div", style)
-    //head.appendChild(search())
-    head.appendChild(newOrder(id, products))
+    head.appendChild(search())
+    head.appendChild(categories())
     return(head)
 }
