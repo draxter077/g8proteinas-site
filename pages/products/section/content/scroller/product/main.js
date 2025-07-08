@@ -31,7 +31,7 @@ export default function product(p){
     product.id = p.id
     product.appendChild(img(p.srcs[0]))
     product.appendChild(title(p.title))
-    product.appendChild(price(p.price))
+    product.appendChild(price(p.price, p.unit))
 
     product.addEventListener(
         "click",

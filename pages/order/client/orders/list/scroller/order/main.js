@@ -13,7 +13,7 @@ export default function order(o, pdts){
         }`
 
     const order = cE("div", style)
-    order.appendChild(info(o))
-    order.appendChild(items(o.items, pdts))
+    order.appendChild(info(o, pdts))
+    order.appendChild(items(o.items))
     return(order)
 }

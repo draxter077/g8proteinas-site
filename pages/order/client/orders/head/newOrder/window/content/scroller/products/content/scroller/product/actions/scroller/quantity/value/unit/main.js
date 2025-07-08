@@ -1,4 +1,4 @@
-export default function unit(){
+export default function unit(u){
     let style = `
         {
             font-size:12px;
@@ -6,6 +6,6 @@ export default function unit(){
         }`
 
     const unit = cE("div", style)
-    unit.innerHTML = "kg"
+    unit.innerHTML = u
     return(unit)
 }

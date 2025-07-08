@@ -4,7 +4,7 @@ import status from "./status/main.js"
 import secondCard from "./secondCard/main.js"
 import repeat from "./repeat/main.js"
 
-export default function info(o){
+export default function info(o, pdts){
     let style = `
         {
             display:flex;
@@ -25,6 +25,6 @@ export default function info(o){
     info.appendChild(title(o.id, o.date, o.hour, o.items))
     info.appendChild(status(o.status))
     info.appendChild(secondCard(o.id))
-    info.appendChild(repeat(o.id))
+    info.appendChild(repeat(o, pdts))
     return(info)
 }

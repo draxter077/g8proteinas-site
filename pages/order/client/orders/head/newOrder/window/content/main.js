@@ -1,6 +1,6 @@
 import scroller from "./scroller/main.js"
 
-export default function content(id, pdts){
+export default function content(pdts, order){
     let style = `
         {
             height:100%;
@@ -10,6 +10,6 @@ export default function content(id, pdts){
         }`
 
     const content = cE("div", style)
-    content.appendChild(scroller(id, pdts))
+    content.appendChild(scroller(pdts, order))
     return(content)
 }

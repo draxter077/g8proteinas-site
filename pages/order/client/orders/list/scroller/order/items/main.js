@@ -1,6 +1,6 @@
 import box from "./box/main.js"
 
-export default function items(is, pdts){
+export default function items(is){
     let style = `
         {
             width:90%;
@@ -10,6 +10,6 @@ export default function items(is, pdts){
         }`
 
     const items = cE("div", style)
-    items.appendChild(box(is, pdts))
+    items.appendChild(box(is))
     return(items)
 }

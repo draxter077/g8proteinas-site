@@ -1,6 +1,6 @@
 import item from "./item/main.js"
 
-export default function box(items, pdts){
+export default function box(items){
     let style = `
         {
             display:flex;
@@ -12,6 +12,6 @@ export default function box(items, pdts){
         }`
 
     const box = cE("div", style)
-    for(let i = 0; i < items.length; i++){box.appendChild(item(items[i], pdts))}
+    for(let i = 0; i < items.length; i++){box.appendChild(item(items[i]))}
     return(box)
 }

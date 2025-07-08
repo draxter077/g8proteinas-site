@@ -1,6 +1,6 @@
 import window from "./window/main.js"
 
-export default function newOrder(id, products){
+export default function newOrder(products){
     let style = `
         {
             font-size:20px;
@@ -22,12 +22,12 @@ export default function newOrder(id, products){
     const newOrder = cE("div", style)
     newOrder.innerHTML = "Novo pedido"
 
-    newOrder.appendChild(window(id, products))
+    newOrder.appendChild(window(products))
 
     newOrder.addEventListener(
         "click",
         async function a(){
-            let w = window(id, products)
+            let w = window(products)
             document.getElementById("root").appendChild(w)
             await new Promise(resolve => setTimeout(resolve, 100))
             w.style.transform = "scale(1)"

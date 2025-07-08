@@ -1,7 +1,7 @@
 import search from "./search/main.js"
 import newOrder from "./newOrder/main.js"
 
-export default function head(id, products){
+export default function head(products){
     let style = `
         {
             display:flex;
@@ -18,6 +18,6 @@ export default function head(id, products){
 
     const head = cE("div", style)
     //head.appendChild(search())
-    head.appendChild(newOrder(id, products))
+    head.appendChild(newOrder(products))
     return(head)
 }

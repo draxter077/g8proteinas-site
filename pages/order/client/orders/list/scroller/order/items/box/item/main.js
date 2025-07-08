@@ -1,7 +1,7 @@
 import img from "./img/main.js"
 import title from "./title/main.js"
 
-export default function item(i, pdts){
+export default function item(i){
     let style = `
         {
             display:flex;
@@ -19,20 +19,8 @@ export default function item(i, pdts){
         }`
 
     const item = cE("div", style)
-    let t, src, q, price
-    for(let k = 0; k < pdts.length; k++){
-        let p = pdts[k]
-        if(p.id == i.id){
-            t = p.title
-            src = p.srcs[0]
-            q = i.quantity
-            price = i.price
-            break
-        }
-    }
-
-    item.appendChild(img(src))
-    item.appendChild(title(t, q, price))
+    item.appendChild(img(i.srcs[0]))
+    item.appendChild(title(i.title, i.quantity, i.price))
     item.addEventListener("click", () => window.open(`/produtos?${i.id}`, "_blank"))
     return(item)
 }

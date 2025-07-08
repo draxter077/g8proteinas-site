@@ -1,4 +1,6 @@
-export default function products(){
+import line from "../../products/content/scroller/product/actions/scroller/quantity/add/line/main.js"
+
+export default function products(order){
     let style = `
         {
             display:flex;
@@ -10,5 +12,12 @@ export default function products(){
         }`
 
     const products = cE("div", style)
+
+    if(order != undefined){
+        for(let i = 0; i < order.items.length; i++){
+            let item = order.items[i]
+            products.appendChild(line(item.id, item.srcs[0], item.title, item.quantity, item.currentPrice))
+        }
+    }
     return(products)
 }

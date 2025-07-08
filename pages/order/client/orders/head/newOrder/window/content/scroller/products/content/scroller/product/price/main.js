@@ -2,7 +2,7 @@ import integer from "./integer/main.js"
 import float from "./float/main.js"
 import unit from "./unit/main.js"
 
-export default function price(p){
+export default function price(p, u){
     let style = `
         {
             display:flex;
@@ -13,8 +13,9 @@ export default function price(p){
         }`
 
     const price = cE("div", style)
+    p = stringifyNumber(p).replaceAll("R$ ","")
     price.appendChild(integer(p.split(",")[0]))
-    price.appendChild(float(p.split(",")[1].split("/")[0]))
-    price.appendChild(unit(p.split("/")[1]))
+    price.appendChild(float(p.split(",")[1]))
+    price.appendChild(unit(u))
     return(price)
 }

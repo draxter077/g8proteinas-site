@@ -1,7 +1,7 @@
 import input from "./input/main.js"
 import unit from "./unit/main.js"
 
-export default function value(){
+export default function value(u){
     let style = `
         {
             display:flex;
@@ -12,6 +12,6 @@ export default function value(){
 
     const value = cE("div", style)
     value.appendChild(input())
-    value.appendChild(unit())
+    value.appendChild(unit(u))
     return(value)
 }

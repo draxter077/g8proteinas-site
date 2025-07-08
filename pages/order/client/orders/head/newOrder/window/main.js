@@ -2,7 +2,7 @@ import head from "./head/main.js"
 import change from "./change/main.js"
 import content from "./content/main.js"
 
-export default function window(id, pdts){
+export default function window(pdts, order){
     let style = `
         {
             position:fixed;
@@ -26,6 +26,6 @@ export default function window(id, pdts){
     const window = cE("div", style)
     window.appendChild(head())
     window.appendChild(change())
-    window.appendChild(content(id, pdts))
+    window.appendChild(content(pdts, order))
     return(window)
 }

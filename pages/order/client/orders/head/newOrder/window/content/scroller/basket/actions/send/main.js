@@ -32,8 +32,8 @@ export default function send(){
                 let id = p.id
                 let src = p.children[0].src
                 let title = p.children[1].innerHTML
-                let quantity = Number(title.split("kg")[0])
-                let price = Number(p.children[2].innerHTML.split("(R$ ")[1].replaceAll("/kg)","").replaceAll(",","."))
+                let quantity = Number(title.split(" ")[0].replaceAll("kg",""))
+                let price = Number(p.children[2].innerHTML.split("(R$ ")[1].split("/")[0].replaceAll(",","."))
                 pdts.push({id:id, srcs:[src], quantity:quantity, price:price, title:title.split("kg de")[1]})
             }
             

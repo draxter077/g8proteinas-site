@@ -26,7 +26,7 @@ export default function send(pdts){
             id:1232123,
             date:"08/07/2025",
             hour:"17:29",
-            status:1,
+            status:0,
             items:pdts
         }
 
@@ -34,7 +34,7 @@ export default function send(pdts){
         "click",
         async function a(e){
             let list = document.getElementById("root").children[0].children[0].children[2].children[1].children[0]
-            list.insertBefore(order(o, pdts), list.children[0])
+            list.insertBefore(order(o), list.children[0])
 
             let closeThis = e.target.parentElement.children[1]
             closeThis.click()

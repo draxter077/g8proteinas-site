@@ -1,7 +1,7 @@
 import products from "./products/main.js"
 import basket from "./basket/main.js"
 
-export default function scroller(id, pdts){
+export default function scroller(pdts, order){
     let style = `
         {
             display:flex;
@@ -13,6 +13,6 @@ export default function scroller(id, pdts){
 
     const scroller = cE("div", style)
     scroller.appendChild(products(pdts))
-    scroller.appendChild(basket(id))
+    scroller.appendChild(basket(order))
     return(scroller)
 }

@@ -2,7 +2,7 @@ import value from "./value/main.js"
 import add from "./add/main.js"
 import remove from "./remove/main.js"
 
-export default function quantity(){
+export default function quantity(u){
     let style = `
         {
             display:flex;
@@ -13,7 +13,7 @@ export default function quantity(){
         }`
 
     const quantity = cE("div", style)
-    quantity.appendChild(value())
+    quantity.appendChild(value(u))
     quantity.appendChild(add())
     quantity.appendChild(remove())
     return(quantity)

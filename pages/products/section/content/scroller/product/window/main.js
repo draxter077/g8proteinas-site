@@ -38,7 +38,7 @@ export default function window(p){
     window.appendChild(head())
     window.appendChild(photos(p.srcs))
     window.appendChild(title(p.title))
-    window.appendChild(price(p.price))
+    window.appendChild(price(p.price, p.unit))
     window.appendChild(button())
     return(window)
 }
