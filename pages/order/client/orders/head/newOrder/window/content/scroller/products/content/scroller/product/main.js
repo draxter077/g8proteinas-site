@@ -10,8 +10,8 @@ export default function product(p){
             flex-direction:column;
             align-items:center;
             justify-content:space-between;
-            height:350px;
-            aspect-ratio:0.65;
+            height:400px;
+            width:14%;
             background:var(--colorWhite);
             margin:7px;
             padding:10px;
@@ -19,7 +19,8 @@ export default function product(p){
             border:1px solid var(--colorBlue);
         }
         :responsive{
-            height:33svh;
+            width:45%;
+            height:300px;
         }`
 
     const product = cE("div", style)

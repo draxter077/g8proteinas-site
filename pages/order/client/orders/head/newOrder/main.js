@@ -22,6 +22,8 @@ export default function newOrder(id, products){
     const newOrder = cE("div", style)
     newOrder.innerHTML = "Novo pedido"
 
+    newOrder.appendChild(window(id, products))
+
     newOrder.addEventListener(
         "click",
         async function a(){

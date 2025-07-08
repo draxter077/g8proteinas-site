@@ -20,6 +20,7 @@ export default function window(id, pdts){
             box-shadow:0px 0px 500px 0px var(--colorBlack);
             transform:scale(0);
             transition:transform 0.5s;
+            z-index:3;
         }`
 
     const window = cE("div", style)

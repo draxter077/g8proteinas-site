@@ -4,10 +4,9 @@ export default function scroller(pdts){
     let style = `
         {
             display:flex;
-            flex-direction:column;
+            flex-direction:row;
             flex-wrap:wrap;
-            height:100%;
-            width:fit-content;
+            width:100%;
         }`
 
     const scroller = cE("div", style)
