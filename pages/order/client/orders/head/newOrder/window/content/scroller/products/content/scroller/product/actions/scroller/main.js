@@ -7,7 +7,7 @@ export default function scroller(){
             display:flex;
             flex-direction:row;
             width:200%;
-            transition:transform 0.5s;
+            transition:transform 0.25s;
         }`
 
     const scroller = cE("div", style)

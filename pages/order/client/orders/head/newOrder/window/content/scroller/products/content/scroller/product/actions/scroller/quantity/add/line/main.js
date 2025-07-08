@@ -13,6 +13,7 @@ export default function line(id, src, t, q, p){
             width:100%;
             font-size:20px;
             padding:5px 10px;
+            margin:1px 0px;
             border:1px solid var(--colorBlue);
             border-radius:5px;
             color:black;

@@ -6,6 +6,6 @@ export default function total(q, p){
         }`
 
     const total = cE("div", style)
-    total.innerHTML = `R$ ${q*p}`
+    total.innerHTML = `${stringifyNumber(q*p)} (${stringifyNumber(p)}/kg)`
     return(total)
 }

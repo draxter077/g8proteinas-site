@@ -17,6 +17,6 @@ export default function button(){
     const button = cE("div", style)
     button.innerHTML = "Selecionar"
 
-    button.addEventListener("click", async (e) => {e.target.parentElement.parentElement.style.transform = "translateX(-50%)";await new Promise(resolve => setTimeout(resolve, 500));e.target.parentElement.parentElement.children[1].children[0].children[0].focus()})
+    button.addEventListener("click", async (e) => {e.target.parentElement.parentElement.style.transform = "translateX(-50%)";await new Promise(resolve => setTimeout(resolve, 250));e.target.parentElement.parentElement.children[1].children[0].children[0].focus()})
     return(button)
 }

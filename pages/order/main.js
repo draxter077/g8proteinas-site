@@ -31,12 +31,12 @@ export default function order(log){
                         {
                             id:1,
                             quantity:12,
-                            price:"50,00/kg"
+                            price:50
                         },
                         {
                             id:2,
                             quantity:25,
-                            price:"75,90/kg"
+                            price:75.9
                         }
                     ]
                 },
@@ -49,7 +49,7 @@ export default function order(log){
                         {
                             id:1,
                             quantity:12,
-                            price:"50,00/kg"
+                            price:50
                         }
                     ]
                 },
@@ -62,7 +62,7 @@ export default function order(log){
                         {
                             id:1,
                             quantity:12,
-                            price:"50,00/kg"
+                            price:50
                         }
                     ]
                 }

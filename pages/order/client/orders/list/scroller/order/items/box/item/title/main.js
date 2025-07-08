@@ -13,6 +13,6 @@ export default function title(t, q, p){
         }`
 
     const title = cE("div", style)
-    title.innerHTML = `${q}kg de ${t}<span>•</span>${stringifyNumber(Number(p.split("/")[0].replaceAll(",","."))*q)}`
+    title.innerHTML = `${q}kg de ${t}<span>•</span>${stringifyNumber(p*q)}`
     return(title)
 }

@@ -17,7 +17,7 @@ export default function title(id, d, h, orders){
     let total = 0
     for(let i = 0; i < orders.length; i++){
         let o = orders[i]
-        total += Number(o.price.split("/")[0].replaceAll(",","."))*o.quantity
+        total += o.price*o.quantity
     }
     title.innerHTML = `${id}<span>•</span>${d} às ${h}<span>•</span>${orders.length} ${orders.length > 1 ? "items" : "item"}<span>•</span>${stringifyNumber(total)}`
     return(title)

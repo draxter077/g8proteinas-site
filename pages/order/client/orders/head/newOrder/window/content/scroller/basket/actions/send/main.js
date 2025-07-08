@@ -1,3 +1,5 @@
+import window from "./window/main.js"
+
 export default function send(){
     let style = `
         {
@@ -21,11 +23,24 @@ export default function send(){
 
     send.addEventListener(
         "click",
-        function a(e){
+        async function a(e){
             let products = e.target.parentElement.parentElement.children[0].children
-            let ids = []
-            for(let i = 0; i < products.length; i++){ids.push(products[i].id)}
-            alert(ids)
+            let observation = e.target.parentElement.children[0].value
+            let pdts = []
+            for(let i = 0; i < products.length; i++){
+                let p = products[i]
+                let id = p.id
+                let src = p.children[0].src
+                let title = p.children[1].innerHTML
+                let quantity = Number(title.split("kg")[0])
+                let price = Number(p.children[2].innerHTML.split("(R$ ")[1].replaceAll("/kg)","").replaceAll(",","."))
+                pdts.push({id:id, srcs:[src], quantity:quantity, price:price, title:title.split("kg de")[1]})
+            }
+            
+            let w = window(pdts, observation)
+            document.getElementById("root").appendChild(w)
+            await new Promise(resolve => setTimeout(resolve, 100))
+            w.style.transform = "scale(1)"
         }
     )
     return(send)
