@@ -1,0 +1,17 @@
+import title from "./title/main.js"
+import content from "./content/main.js"
+
+export default function clients(cs){
+    let style = `
+        {
+            display:flex;
+            flex-direction:column;
+            width:90%;
+            margin:2.5vh 0px;
+        }` 
+
+    const clients = cE("div", style)
+    clients.appendChild(title())
+    clients.appendChild(content(cs))
+    return(clients)
+}

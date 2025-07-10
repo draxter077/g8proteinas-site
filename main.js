@@ -1,6 +1,7 @@
 import main from "./pages/main/main.js"
 import products from "./pages/products/main.js"
 import order from "./pages/order/main.js"
+import admin from "./pages/admin/main.js"
 
 window.cE = function cE(t, stl){
     function addClass(){
@@ -143,6 +144,9 @@ window.construct = function construct(p){
             else if(paths[0] == "pedidos"){
                 root.appendChild(order())
             }
+            else if(paths[0] == "admin"){
+                root.appendChild(admin())
+            }
             else{
                 root.appendChild(main())
             }
@@ -153,6 +157,7 @@ window.construct = function construct(p){
     }
     else{
         if(p.page == "order"){root.appendChild(order(p.data))}
+        else if(p.page == "admin"){root.appendChild(admin(p.data))}
     }
 }
 

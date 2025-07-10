@@ -1,0 +1,23 @@
+import data from "./data/main.js"
+
+export default function info(o, total){
+    let style = `
+        {
+            display:flex;
+            flex-direction:row;
+            align-items:center;
+            flex-wrap:wrap;
+            width:100%;
+            height:40%;
+            overflow-y:scroll;
+        }`
+
+    const info = cE("div", style)
+    info.appendChild(data("ID", o.id))
+    info.appendChild(data("Data e hora", `${o.date} às ${o.hour}`))
+    info.appendChild(data("Cliente", `${o.clientid} - ${o.clientname}`))
+    info.appendChild(data("Nº de itens", o.items.length))
+    info.appendChild(data("Total", stringifyNumber(total)))
+    if(o.observations != undefined){info.appendChild(data("Observações", o.observations))}
+    return(info)
+}
