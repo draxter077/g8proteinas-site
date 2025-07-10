@@ -23,7 +23,7 @@ export default function submit(){
  
             alert(`Entrando com ${user} e ${password}`)
 
-            log = {
+            let log = {
                 user:{
                     name:"Keilla",
                     email:"admin@g8proteinas.com.br",
