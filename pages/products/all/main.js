@@ -8,6 +8,9 @@ export default function all(id, pdts){
             flex-direction:column;
             width:90%;
             margin:15vh 0px;
+        }
+        :responsive{
+            width:100%;
         }`
 
     const all = cE("div", style)

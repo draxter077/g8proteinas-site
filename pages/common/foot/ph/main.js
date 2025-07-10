@@ -7,13 +7,12 @@ export default function ph(){
             display:flex;
             flex-direction:row;
             align-items:center;
-            font-size:17px;
+            font-size:15px;
             color:var(--colorWhite);
         }
         :responsive{
-            margin:10px 0px 0px 0px;
             padding:0px 0px 10px 0px;
-            font-size:12px;
+            font-size:10px;
         }`
 
     const ph = cE("div", style)

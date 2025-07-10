@@ -15,5 +15,7 @@ export default function logout(){
 
     const logout = cE("img", style)
     logout.src = "./assets/elements/logout.png"
+
+    logout.addEventListener("click" , () => window.open("/", "_self"))
     return(logout)
 }

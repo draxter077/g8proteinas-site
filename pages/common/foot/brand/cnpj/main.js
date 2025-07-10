@@ -1,12 +1,12 @@
 export default function cnpj(){
     let style = `
         {
-            font-size:15px;
+            font-size:12px;
             color:var(--colorWhite);
             user-select:text;
         }
         :responsive{
-            font-size:11px;
+            font-size:8px;
             order:2;
         }`
 

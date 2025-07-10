@@ -1,9 +1,9 @@
 export default function img(){
     let style = `
         {
-            height:40px;
+            height:25px;
             border-radius:5px;
-            margin:0px 0px 0px 10px;
+            margin:0px 0px 0px 5px;
             cursor:pointer;
             transition:transform 0.5s;
         }
@@ -11,7 +11,7 @@ export default function img(){
             transform:scale(1.1);
         }
         :responsive{
-            height:30px;
+            height:20px;
         }`
 
     const img = cE("img", style)

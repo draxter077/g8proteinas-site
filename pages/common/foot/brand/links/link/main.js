@@ -1,7 +1,7 @@
 export default function link(src, url){
     let style = `
         {
-            height:40px;
+            height:30px;
             filter:invert(1);
             cursor:pointer;
             transition:filter 0.5s;
@@ -10,7 +10,7 @@ export default function link(src, url){
             filter:invert(0.4);
         }
         :responsive{
-            height:27px;
+            height:20px;
         }`
 
     const link = cE("img", style)

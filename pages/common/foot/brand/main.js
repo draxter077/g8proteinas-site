@@ -15,7 +15,7 @@ export default function brand(){
 
     const brand = cE("div", style)
     brand.appendChild(logo())
-    brand.appendChild(cnpj())
+    //brand.appendChild(cnpj())
     brand.appendChild(links())
     return(brand)
 }

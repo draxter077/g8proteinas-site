@@ -9,6 +9,9 @@ export default function section(t, pdts){
             align-items:flex-start;
             width:90%;
             margin:5vh 0px 0px 0px;
+        }
+        :responsive{
+            width:100%;
         }`
 
     const section = cE("div", style)
