@@ -8,6 +8,9 @@ export default function content(os){
             width:100%;
             height:35svh;
             overflow-y:scroll;
+        }
+        :responsive{
+            overflow-x:scroll;
         }`
 
     const content = cE("div", style)

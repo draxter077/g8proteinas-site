@@ -10,7 +10,7 @@ export default function title(){
             margin:0px 0px 10px 20px;
         }
         :responsive{
-            font-size:22px;
+            font-size:18px;
         }`
 
     const title = cE("div", style)

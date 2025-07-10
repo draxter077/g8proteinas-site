@@ -4,6 +4,7 @@ export default function line(o){
     let style = `
         {
             font-size:18px;
+            text-wrap:nowrap;
             padding:2px 5px;
             border-bottom:1px solid var(--colorBlue);
             width:100%;
@@ -19,7 +20,8 @@ export default function line(o){
             margin:0px 5px;
         }
         :responsive{
-            font-size:12px;
+            font-size:13px;
+            width:fit-content;
         }`
 
     const line = cE("div", style)

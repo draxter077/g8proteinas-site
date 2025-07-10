@@ -8,6 +8,9 @@ export default function title(){
             padding:0px 10px;
             width:fit-content;
             margin:0px 0px 10px 20px;
+        }
+        :responsive{
+            font-size:18px;
         }`
 
     const title = cE("div", style)

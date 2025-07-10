@@ -8,7 +8,7 @@ export default function finance(orders){
             justify-content:space-around;
             align-items:center;
             width:80%;
-            margin:0px 0px 2.5vh 0px;
+            margin:2.5vh 0px;
         }
         :responsive{
             width:100%;

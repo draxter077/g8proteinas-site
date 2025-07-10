@@ -7,7 +7,10 @@ export default function clients(cs){
             display:flex;
             flex-direction:column;
             width:90%;
-            margin:2.5vh 0px;
+            margin:7.5vh 0px;
+        }
+        :responsive{
+            width:95%;
         }` 
 
     const clients = cE("div", style)
