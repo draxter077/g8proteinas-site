@@ -1,4 +1,4 @@
-import order from "../../../../../../../../../../../list/scroller/order/main.js"
+import order from "../../../../../../../../../../list/scroller/order/main.js"
 import window from "./window/main.js"
 
 export default function send(pdts){

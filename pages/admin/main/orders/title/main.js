@@ -7,7 +7,7 @@ export default function title(){
             border-left:1px solid var(--colorOrange);
             padding:0px 10px;
             width:fit-content;
-            margin:0px 0px 10px 20px;
+            margin:0px 0px 0px 20px;
         }
         :responsive{
             font-size:18px;

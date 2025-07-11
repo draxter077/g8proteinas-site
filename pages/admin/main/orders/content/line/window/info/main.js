@@ -8,8 +8,6 @@ export default function info(o, total){
             align-items:center;
             flex-wrap:wrap;
             width:100%;
-            height:40%;
-            overflow-y:scroll;
         }`
 
     const info = cE("div", style)

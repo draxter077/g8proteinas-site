@@ -3,7 +3,9 @@ import window from "./window/main.js"
 export default function send(){
     let style = `
         {
+            width:80%;
             font-size:20px;
+            text-align:center;
             padding:6px 10px;
             background:var(--colorBlue);
             color:var(--colorWhite);
@@ -12,7 +14,7 @@ export default function send(){
             transition:background 0.5s;
         }
         :hover{
-            background:var(--colorBlack);
+            background:var(--colorOrange);
         }
         :responsive{
             font-size:15px;
@@ -24,8 +26,8 @@ export default function send(){
     send.addEventListener(
         "click",
         async function a(e){
-            let products = e.target.parentElement.parentElement.children[0].children
-            let observation = e.target.parentElement.children[0].value
+            let products = e.target.parentElement.children[0].children
+
             let pdts = []
             for(let i = 0; i < products.length; i++){
                 let p = products[i]
@@ -37,7 +39,7 @@ export default function send(){
                 pdts.push({id:id, srcs:[src], quantity:quantity, price:price, title:title.split("kg de")[1]})
             }
             
-            let w = window(pdts, observation)
+            let w = window(pdts)
             document.getElementById("root").appendChild(w)
             await new Promise(resolve => setTimeout(resolve, 100))
             w.style.transform = "scale(1)"

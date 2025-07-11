@@ -1,7 +1,7 @@
 export default function img(src){
     let style = `
         {
-            height:60px;
+            height:40px;
             aspect-ratio:1;
             border-radius:5px;
             background:var(--colorWhite);

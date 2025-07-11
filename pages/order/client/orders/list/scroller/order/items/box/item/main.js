@@ -6,7 +6,7 @@ export default function item(i){
         {
             display:flex;
             flex-direction:row;
-            justify-content:space-between;
+            justify-content:flex-start;
             align-items:center;
             font-size:18px;
             color:var(--colorWhite);

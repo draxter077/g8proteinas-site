@@ -5,18 +5,18 @@ export default function window(pdts, obs){
     let style = `
         {
             position:fixed;
-            top:25%;
+            top:40%;
             left:25%;
 
             display:flex;
             flex-direction:column;
             justify-content:space-around;
             align-items:center;
-            height:50%;
+            height:20%;
             width:50%;
             background:var(--colorWhite);
             border-radius:5px;
-            border:5px solid var(--colorOrange);
+            border:2px solid var(--colorOrange);
             padding:10px;
             box-shadow:0px 0px 10px 0px var(--colorBlack);
             z-index:6;

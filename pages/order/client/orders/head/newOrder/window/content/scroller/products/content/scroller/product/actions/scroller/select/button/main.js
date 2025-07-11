@@ -12,6 +12,9 @@ export default function button(){
         }
         :hover{
             background:var(--colorBlue);
+        }
+        :responsive{
+            font-size:13px;
         }`
 
     const button = cE("div", style)

@@ -1,17 +1,18 @@
 export default function finish(o){
     let style = `
         {
+            width:80%;
             font-size:20px;
+            text-align:center;
             color:var(--colorWhite);
             background:var(--colorOrange);
             padding:5px 10px;
             border-radius:5px;
-            width:fit-content;
             cursor:pointer;
             transition:background 0.5s;
         }
         :hover{
-            background:var(--colorBlack);
+            background:var(--colorBlue);
         }
         :responsive{
             font-size:16px;

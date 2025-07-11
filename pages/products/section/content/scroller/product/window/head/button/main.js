@@ -1,16 +1,9 @@
 export default function button(){
     let style = `
         {
-            display:flex;
-            justify-content:center;
-            align-items:center;
             font-size:20px;
-            height:30px;
             color:var(--colorWhite);
-            border-radius:100%;
-            aspect-ratio:1;
             cursor:pointer;
-            background:var(--colorBlue);
         }`
 
     const button = cE("div", style)
