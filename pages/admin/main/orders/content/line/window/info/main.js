@@ -5,6 +5,7 @@ export default function info(o, total){
         {
             display:flex;
             flex-direction:row;
+            justify-content:space-around;
             align-items:center;
             flex-wrap:wrap;
             width:100%;

@@ -1,4 +1,5 @@
 import title from "./title/main.js"
+import head from "./head/main.js"
 import content from "./content/main.js"
 
 export default function products(pdts){
@@ -15,6 +16,7 @@ export default function products(pdts){
 
     const products = cE("div", style)
     products.appendChild(title())
+    products.appendChild(head())
     products.appendChild(content(pdts))
     return(products)
 }

@@ -11,7 +11,7 @@ export default function admin(log){
 
     const admin = cE("div", style)
     if(log == undefined){
-        //admin.appendChild(login())
+        admin.appendChild(login())
         log = {
             user:{
                 name:"Keilla",
@@ -341,7 +341,7 @@ export default function admin(log){
                 }
             ]
         }
-        admin.appendChild(main(log))
+        //admin.appendChild(main(log))
     }
     else{
         admin.appendChild(main(log))

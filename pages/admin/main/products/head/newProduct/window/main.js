@@ -1,9 +1,9 @@
 import head from "./head/main.js"
 import photos from "./photos/main.js"
 import info from "./info/main.js"
-import actions from "./actions/main.js"
+import save from "./save/main.js"
 
-export default function window(p){
+export default function window(){
     let style = `
         {
             position:fixed;
@@ -26,8 +26,8 @@ export default function window(p){
 
     const window = cE("div", style)
     window.appendChild(head())
-    window.appendChild(photos(p.srcs))
-    window.appendChild(info(p))
-    window.appendChild(actions(p))
+    window.appendChild(photos())
+    window.appendChild(info())
+    window.appendChild(save())
     return(window)
 }
