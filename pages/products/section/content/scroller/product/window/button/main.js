@@ -10,7 +10,7 @@ export default function button(){
             transition:background 0.5s;
         }
         :hover{
-            background:var(--colorBlack);
+            background:var(--colorBlue);
         }
         :responsive{
             font-size:18px;

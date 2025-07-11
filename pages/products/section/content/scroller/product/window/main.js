@@ -20,7 +20,8 @@ export default function window(p){
             height:80%;
             background:var(--colorWhite);
             border-radius:5px;
-            padding:20px;
+            padding:0px 0px 20px 0px;
+            overflow:hidden;
             box-shadow:0px 0px 500px 0px var(--colorBlack);
 
             transform:translateX(-200%);

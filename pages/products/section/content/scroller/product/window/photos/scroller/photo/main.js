@@ -6,6 +6,7 @@ export default function photo(src){
             margin:5px;
             box-shadow:0px 0px 1px 0px var(--colorBlue);
             border-radius:5px;
+            background:var(--colorWhite);
         }`
 
     const photo = cE("img", style)

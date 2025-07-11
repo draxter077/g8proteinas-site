@@ -7,7 +7,7 @@ export default function img(src){
         }
         :responsive{
             margin:0px 0px 5px 0px;
-            width:50%;
+            width:40%;
         }`
 
     const img = cE("img", style)

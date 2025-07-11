@@ -7,8 +7,8 @@ export default function img(src){
             box-shadow:0px 0px 2px 0px var(--colorBlue);
         }
         :responsive{
-            width:49%;
-            margin:5px 1px;
+            width:40%;
+            margin:5px;
         }`
 
     const img = cE("img", style)

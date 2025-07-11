@@ -4,10 +4,9 @@ export default function title(t){
             font-size:25px;
             color:var(--colorOrange);
             padding:0px 5px;
-            border-bottom:1px solid var(--colorBlue);
         }
         :responsive{
-            font-size:18px;
+            font-size:16px;
         }`
 
     const title = cE("div", style)

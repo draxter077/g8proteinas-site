@@ -15,7 +15,7 @@ export default function button(){
             background:var(--colorOrange);
         }
         :responsive{
-            font-size:18px;
+            font-size:16px;
         }`
 
     const button = cE("div", style)

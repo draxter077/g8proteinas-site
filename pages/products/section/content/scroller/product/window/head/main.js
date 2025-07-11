@@ -7,6 +7,8 @@ export default function head(){
             flex-direction:row;
             justify-content:flex-end;
             width:100%;
+            padding:0px 10px;
+            background:var(--colorBlue);
         }`
 
     const head = cE("div", style)

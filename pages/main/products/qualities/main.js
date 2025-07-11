@@ -7,7 +7,7 @@ export default function qualities(){
             margin:7.5vh 0px 0px 0px;
         }
         :responsive{
-            font-size:18px;
+            font-size:17px;
             width:90%;
         }`
 

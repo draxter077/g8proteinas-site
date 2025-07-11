@@ -9,7 +9,7 @@ export default function contact(){
             width:100%;
         }
         :responsive{
-            font-size:23px;
+            font-size:20px;
         }`
 
     const title = cE("div", style)

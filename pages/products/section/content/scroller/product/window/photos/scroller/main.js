@@ -5,6 +5,8 @@ export default function scroller(srcs){
         {
             display:flex;
             flex-direction:row;
+            justify-content:space-around;
+            min-width:100%;
         }`
 
     const scroller = cE("div", style)

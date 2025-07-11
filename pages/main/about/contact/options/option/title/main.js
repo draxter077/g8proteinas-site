@@ -7,7 +7,7 @@ export default function title(t){
             text-align:center;
         }
         :responsive{
-            font-size:18px;
+            font-size:15px;
         }`
 
     const title = cE("div", style)

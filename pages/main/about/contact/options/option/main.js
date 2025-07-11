@@ -18,7 +18,7 @@ export default function option(src, url, t){
             background:var(--colorBlue);
         }
         :responsive{
-            width:48%;
+            width:40%;
         }`
 
     const option = cE("div", style)
