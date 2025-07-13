@@ -351,6 +351,7 @@ window.exampleOrder = {
             currentPrice:exampleProducts[1].price,
             title:exampleProducts[1].title,
             category:exampleProducts[1].category,
+            supplier:exampleProducts[1].supplier,
             srcs:exampleProducts[1].srcs
         },
         {
@@ -362,6 +363,7 @@ window.exampleOrder = {
             currentPrice:exampleProducts[2].price,
             title:exampleProducts[2].title,
             category:exampleProducts[2].category,
+            supplier:exampleProducts[2].supplier,
             srcs:exampleProducts[2].srcs
         }
     ]
@@ -385,6 +387,7 @@ window.exampleOpenOrder = {
             currentPrice:exampleProducts[1].price,
             title:exampleProducts[1].title,
             category:exampleProducts[1].category,
+            supplier:exampleProducts[1].supplier,
             srcs:exampleProducts[1].srcs
         },
         {
@@ -396,6 +399,7 @@ window.exampleOpenOrder = {
             currentPrice:exampleProducts[2].price,
             title:exampleProducts[2].title,
             category:exampleProducts[2].category,
+            supplier:exampleProducts[2].supplier,
             srcs:exampleProducts[2].srcs
         }
     ]

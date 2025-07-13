@@ -1,5 +1,3 @@
-import window from "./window/main.js"
-
 export default function line(c){
     let style = `
         {
@@ -25,16 +23,6 @@ export default function line(c){
         }`
 
     const line = cE("div", style)
-    line.innerHTML = `${c.id}<span>•</span>${c.cnpj}<span>•</span>${c.businessName}`
-
-    line.addEventListener(
-        "click",
-        async function a(){
-            let w = window(c)
-            document.getElementById("root").appendChild(w)
-            await new Promise(resolve => setTimeout(resolve, 100))
-            w.style.transform = "scale(1)"
-        }
-    )
+    line.innerHTML = `${c.id}<span>•</span>${c.cnpj}<span>•</span>${c.businessName}<span>•</span>${c.email}<span>•</span>${c.phoneNumber}<span>•</span>${c.orders.length} pedidos`
     return(line)
 }

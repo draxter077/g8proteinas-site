@@ -14,7 +14,6 @@ export default function content(cs){
         }`
 
     const content = cE("div", style)
-    cs = [...cs, ...cs, ...cs]
     for(let i = 0; i < cs.length; i++){content.appendChild(line(cs[i]))}
     return(content)
 }

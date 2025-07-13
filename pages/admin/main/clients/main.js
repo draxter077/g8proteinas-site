@@ -1,4 +1,5 @@
 import title from "./title/main.js"
+import search from "./search/main.js"
 import content from "./content/main.js"
 
 export default function clients(cs){
@@ -15,6 +16,7 @@ export default function clients(cs){
 
     const clients = cE("div", style)
     clients.appendChild(title())
+    clients.appendChild(search())
     clients.appendChild(content(cs))
     return(clients)
 }
