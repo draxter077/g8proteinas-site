@@ -28,6 +28,6 @@ export default function window(o, total){
     window.appendChild(head())
     window.appendChild(info(o, total))
     window.appendChild(items(o.items))
-    if(o.status == 0){window.appendChild(finish(o))}
+    if(o.status == "Em andamento"){window.appendChild(finish(o))}
     return(window)
 }

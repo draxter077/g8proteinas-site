@@ -11,7 +11,7 @@ export default function content(data){
         }`
 
     const content = cE("div", style)
-    content.appendChild(info(data))
+    content.appendChild(info())
     content.appendChild(button(data))
     return(content)
 }

@@ -39,10 +39,12 @@ export default function send(){
                 pdts.push({id:id, srcs:[src], quantity:quantity, price:price, title:title.split("kg de")[1]})
             }
             
-            let w = window(pdts)
-            document.getElementById("root").appendChild(w)
-            await new Promise(resolve => setTimeout(resolve, 100))
-            w.style.transform = "scale(1)"
+            if(pdts.length > 0){
+                let w = window(pdts)
+                document.getElementById("root").appendChild(w)
+                await new Promise(resolve => setTimeout(resolve, 100))
+                w.style.transform = "scale(1)"
+            }
         }
     )
     return(send)

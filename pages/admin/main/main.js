@@ -16,22 +16,11 @@ export default function client(log){
         }`
 
     const client = cE("div", style)
-
-    let ords = []
-    for(let i = 0; i < log.users.length; i++){
-        let os = log.users[i].orders
-        for(let o = 0; o < os.length; o++){
-            os[o].clientid = log.users[i].id
-            os[o].clientname = log.users[i].businessName
-            ords.push(os[o])
-        }
-    }
-
     console.log(log)
     client.appendChild(head())
     client.appendChild(config(log.user))
-    client.appendChild(finance(ords))
-    client.appendChild(orders(ords))
+    client.appendChild(finance(log.orders))
+    client.appendChild(orders(log.orders))
     client.appendChild(products(log.products))
     client.appendChild(clients(log.users))
     client.appendChild(foot())

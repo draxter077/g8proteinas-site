@@ -1,6 +1,6 @@
 import box from "./box/main.js"
 
-export default function config(){
+export default function config(data){
     let style = `
         {
             width:80%;
@@ -15,6 +15,6 @@ export default function config(){
         }`
 
     const config = cE("div", style)
-    config.appendChild(box())
+    config.appendChild(box(data))
     return(config)
 }

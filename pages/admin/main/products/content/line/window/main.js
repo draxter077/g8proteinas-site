@@ -1,7 +1,7 @@
 import head from "./head/main.js"
 import photos from "./photos/main.js"
 import info from "./info/main.js"
-import actions from "./actions/main.js"
+import save from "./save/main.js"
 
 export default function window(p){
     let style = `
@@ -28,6 +28,6 @@ export default function window(p){
     window.appendChild(head())
     window.appendChild(photos(p.srcs))
     window.appendChild(info(p))
-    window.appendChild(actions(p))
+    window.appendChild(save(p))
     return(window)
 }

@@ -14,6 +14,6 @@ export default function title(t){
         }`
 
     const title = cE("div", style)
-    title.innerHTML = t.split(" - ")[0]
+    title.innerHTML = t
     return(title)
 }

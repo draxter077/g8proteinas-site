@@ -7,6 +7,7 @@ export default function input(ph){
             padding:2px 5px;
             border-bottom:1px solid var(--colorOrange);
             margin:10px 0px;
+            transition:border-bottom 0.5s;
         }
         ::placeholder{
             font-style:italic;

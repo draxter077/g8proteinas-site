@@ -1,6 +1,6 @@
 import value from "./value/main.js"
 
-export default function info(){
+export default function info(data){
     let style = `
         {
             display:flex;
@@ -14,11 +14,10 @@ export default function info(){
         }`
 
     const info = cE("div", style)
-    info.appendChild(value("CNPJ","00.000.000/0001-00"))
-    info.appendChild(value("Nome da Empresa","JA Grillo LTDA"))
-    info.appendChild(value("Nome do Responsável","João A. Grillo"))
-    info.appendChild(value("Email","grillo@jagrillo.com.br"))
-    info.appendChild(value("Telefone","(51) 8551-8360"))
+    info.appendChild(value("CNPJ",data.cnpj))
+    info.appendChild(value("Nome da Empresa",data.businessName))
+    info.appendChild(value("Email",data.email))
+    info.appendChild(value("Telefone",data.phoneNumber))
     info.appendChild(value("Senha",""))
     return(info)
 }

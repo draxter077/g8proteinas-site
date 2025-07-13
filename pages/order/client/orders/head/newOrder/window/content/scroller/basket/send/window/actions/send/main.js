@@ -26,7 +26,7 @@ export default function send(pdts){
             id:1232123,
             date:"08/07/2025",
             hour:"17:29",
-            status:0,
+            status:"Em andamento",
             items:pdts
         }
 

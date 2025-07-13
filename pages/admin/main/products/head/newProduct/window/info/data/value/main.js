@@ -20,6 +20,6 @@ export default function value(v, t){
     const value = cE(elem, style)
     value.rows = "1"
     value.placeholder = v
-    if(t == "ID"){value.disabled = true}
+    if(t == "Preço da unidade" || t == "Lucro por unidade"){value.type = "number"}
     return(value)
 }

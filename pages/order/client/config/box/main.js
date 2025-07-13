@@ -1,7 +1,7 @@
 import title from "./title/main.js"
 import content from "./content/main.js"
 
-export default function box(){
+export default function box(data){
     let style = `
         {
             display:flex;
@@ -15,6 +15,6 @@ export default function box(){
 
     const box = cE("div", style)
     box.appendChild(title())
-    box.appendChild(content())
+    box.appendChild(content(data))
     return(box)
 }

@@ -11,7 +11,6 @@ export default function content(){
 
     const content = cE("div", style)
     content.appendChild(input("Nome da empresa"))
-    content.appendChild(input("Nome do responsável"))
     content.appendChild(input("Email"))
     content.appendChild(input("Telefone"))
     return(content)

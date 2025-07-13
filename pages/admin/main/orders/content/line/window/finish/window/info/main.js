@@ -15,6 +15,6 @@ export default function info(pdts){
         let p = pdts[i]
         total += Number(p.price)*p.quantity
     }
-    info.innerHTML = `Seu pedido de ${pdts.length} ${pdts.length > 1 ? "itens" : "item"}, totalizando ${stringifyNumber(total)}, será enviado. Essa ação é irreversível.`
+    info.innerHTML = `Esse pedido será alterado para "Concluído". Essa ação é irreversível.`
     return(info)
 }

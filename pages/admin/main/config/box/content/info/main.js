@@ -1,6 +1,6 @@
 import value from "./value/main.js"
 
-export default function info(data){
+export default function info(){
     let style = `
         {
             display:flex;
@@ -14,9 +14,6 @@ export default function info(data){
         }`
 
     const info = cE("div", style)
-    info.appendChild(value("Nome do Responsável",data.name))
-    info.appendChild(value("Email",data.email))
-    info.appendChild(value("Telefone",data.phoneNumber))
     info.appendChild(value("Senha",""))
     return(info)
 }

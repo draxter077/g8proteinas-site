@@ -15,9 +15,11 @@ export default function info(p){
 
     const info = cE("div", style)
     info.appendChild(data("ID", p.id))
-    info.appendChild(data("Preço", stringifyNumber(p.price)))
-    info.appendChild(data("Unidade", p.unit))
     info.appendChild(data("Título", p.title))
+    info.appendChild(data("Categoria", p.category))
+    info.appendChild(data("Unidade", p.unit))
+    info.appendChild(data("Preço da unidade", p.price))
+    info.appendChild(data("Lucro por unidade", p.revenue))
     info.appendChild(data("Fornecedor", p.supplier))
     return(info)
 }

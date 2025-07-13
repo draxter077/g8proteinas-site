@@ -15,17 +15,19 @@ export default function finance(orders){
         }`
 
     const finance = cE("div", style)
+    let monthYear = orders[orders.length - 1].date.slice(3,10)
+
     let sales = 0, revenue = 0
     for(let i = 0; i < orders.length; i++){
         let o = orders[i]
         let items = o.items
         for(let k = 0; k < items.length; k++){
             sales += items[k].price*items[k].quantity
-            revenue += items[k].price*items[k].quantity // Mudar para margem
+            revenue += items[k].revenue*items[k].quantity
         }
     }
 
-    finance.appendChild(value("Faturamento", sales))
-    finance.appendChild(value("Lucro", revenue))
+    finance.appendChild(value(`Faturamento ${monthYear}`, sales))
+    finance.appendChild(value(`Lucro ${monthYear}`, revenue))
     return(finance)
 }

@@ -8,12 +8,13 @@ export default function line(o){
             padding:2px 5px;
             border-bottom:1px solid var(--colorBlue);
             width:100%;
-            color:var(--colorWhite);
+            ${o.status == "Em andamento" ? "color:var(--colorBlack);" : "color:var(--colorWhite);"}
+            ${o.status == "Em andamento" ? "background:var(--colorYellow);" : ""}
             cursor:pointer;
             transition:background 0.25s;
         }
         :hover{
-            background:var(--colorBlue);
+            background:var(--colorBlue) !important;
         }
         >span{
             color:var(--colorBlue);
@@ -25,9 +26,11 @@ export default function line(o){
         }`
 
     const line = cE("div", style)
+    line.id = o.id
+    
     let total = 0
     for(let i = 0; i < o.items.length; i++){total += o.items[i].price*o.items[i].quantity}
-    line.innerHTML = `${o.id}<span>•</span>${o.date} às ${o.hour}<span>•</span>${o.items.length} ite${o.items.length > 1 ? "ns" : "m"}<span>•</span>${stringifyNumber(total)}<span>•</span>${o.status}`
+    line.innerHTML = `${o.id}<span>•</span>${o.date} às ${o.hour}<span>•</span>${o.clientcnpj} - ${o.clientname}<span>•</span>${o.items.length} ite${o.items.length > 1 ? "ns" : "m"}<span>•</span>${stringifyNumber(total)}<span>•</span>${o.status}`
 
     line.addEventListener(
         "click",

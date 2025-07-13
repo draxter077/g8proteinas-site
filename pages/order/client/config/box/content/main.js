@@ -1,7 +1,7 @@
 import info from "./info/main.js"
 import button from "./button/main.js"
 
-export default function content(){
+export default function content(data){
     let style = `
         {
             display:flex;
@@ -11,7 +11,7 @@ export default function content(){
         }`
 
     const content = cE("div", style)
-    content.appendChild(info())
-    content.appendChild(button())
+    content.appendChild(info(data))
+    content.appendChild(button(data))
     return(content)
 }

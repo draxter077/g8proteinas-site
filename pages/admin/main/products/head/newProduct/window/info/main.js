@@ -14,9 +14,11 @@ export default function info(){
         }`
 
     const info = cE("div", style)
-    info.appendChild(data("Preço", "1234,50"))
-    info.appendChild(data("Unidade", "kg/unid"))
     info.appendChild(data("Título", ""))
+    info.appendChild(data("Categoria", ""))
+    info.appendChild(data("Unidade", "kg/unid"))
+    info.appendChild(data("Preço da unidade", "1234,50"))
+    info.appendChild(data("Lucro por unidade", "1234,50"))
     info.appendChild(data("Fornecedor", "ID"))
     return(info)
 }

@@ -12,6 +12,7 @@ export default function input(ph, v){
 
     const input = cE("input", style)
     input.value = v
+    if(ph == "Senha"){input.type = "password"}
 
     if(ph == "CNPJ"){
         input.addEventListener(

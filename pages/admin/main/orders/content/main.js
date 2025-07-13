@@ -14,7 +14,7 @@ export default function content(os){
         }`
 
     const content = cE("div", style)
-    os = [...os, ...os, ...os]
+    os = os.reverse()
     for(let i = 0; i < os.length; i++){content.appendChild(line(os[i]))}
     return(content)
 }
