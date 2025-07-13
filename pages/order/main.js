@@ -14,6 +14,7 @@ export default function order(log){
         order.appendChild(login())
     }
     else{
+        axios.defaults.headers.common["userAuth"] = log.user.id
         order.appendChild(client(log))
         order.style.opacity = 1
     }

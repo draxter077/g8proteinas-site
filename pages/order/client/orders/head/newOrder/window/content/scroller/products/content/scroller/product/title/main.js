@@ -1,4 +1,4 @@
-export default function title(t){
+export default function title(t, c){
     let style = `
         {
             font-size:18px;
@@ -15,6 +15,6 @@ export default function title(t){
         }`
 
     const title = cE("div", style)
-    title.innerHTML = t
+    title.innerHTML = t + " - " + c
     return(title)
 }

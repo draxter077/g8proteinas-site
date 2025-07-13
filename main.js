@@ -161,9 +161,9 @@ window.construct = function construct(p){
     }
 }
 
-//window.apiURL = ""
+window.apiURL = ""
 
-//axios.defaults.headers.common["ngrok-skip-browser-warning"] = "69420"
+axios.defaults.headers.common["ngrok-skip-browser-warning"] = "69420"
 document.getElementsByTagName("head")[0].appendChild(document.createElement("style"))
 cE("root", `html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big, 
     cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,
@@ -253,7 +253,7 @@ window.stringifyNumber = function stringifyNumber(n){
 
 window.exampleProducts = [
     {
-        id:"d3476",
+        id:"p476",
         title:"Salmão chileno tipo A tamanho M característica C",
         category:"Peixes",
         price:50,
@@ -267,7 +267,7 @@ window.exampleProducts = [
         ]
     },
     {
-        id:"234h6",
+        id:"p4h6",
         title:"Atum dinamarquês tipo A tamanho M característica C",
         category:"Peixes",
         price:40,
@@ -281,7 +281,7 @@ window.exampleProducts = [
         ]
     },
     {
-        id:"ryn19",
+        id:"pn19",
         title:"Camarão do tipo J tamanho G característica K",
         category:"Frutos do mar",
         price:47,
@@ -295,7 +295,7 @@ window.exampleProducts = [
         ]
     },
     {
-        id:"12387",
+        id:"p387",
         title:"Cupim bovino do tipo F tamanho K característica L",
         category:"Bovinos",
         price:33,
@@ -309,7 +309,7 @@ window.exampleProducts = [
         ]
     },
     {
-        id:"bcsdf",
+        id:"psdf",
         title:"Lombo suíno nórdico tipo F tamanho G característica M",
         category:"Suínos",
         price:27,
@@ -325,7 +325,7 @@ window.exampleProducts = [
 ]
 
 window.exampleClient = {
-    id:"2c4",
+    id:"c2c4",
     cnpj:"12.123.123/0001-12",
     businessName:"1234 Peixaria e Sushi",
     email:"joao@joao.com.br",
@@ -334,7 +334,7 @@ window.exampleClient = {
 }
 
 window.exampleOrder = {
-    id:"d123",
+    id:"od12",
     clientid:"2c4",
     clientcnpj:"12.123.123/0001-12",
     clientname:"1234 Peixaria e Sushi",
@@ -343,7 +343,7 @@ window.exampleOrder = {
     status:"Concluído",
     items:[
         {
-            id:"234h6",
+            id:"p4h6",
             quantity:12,
             unit:exampleProducts[1].unit,
             price:48.75,
@@ -355,7 +355,7 @@ window.exampleOrder = {
             srcs:exampleProducts[1].srcs
         },
         {
-            id:"ryn19",
+            id:"pn19",
             quantity:25,
             unit:exampleProducts[2].unit,
             price:49.5,
@@ -370,8 +370,8 @@ window.exampleOrder = {
 },
 
 window.exampleOpenOrder = {
-    id:"d123",
-    clientid:"2c4",
+    id:"o123",
+    clientid:"c2c4",
     clientcnpj:"12.123.123/0001-12",
     clientname:"1234 Peixaria e Sushi",
     date:"01/01/2025",
@@ -379,7 +379,7 @@ window.exampleOpenOrder = {
     status:"Em andamento",
     items:[
         {
-            id:"234h6",
+            id:"p4h6",
             quantity:12,
             unit:exampleProducts[1].unit,
             price:48.75,
@@ -391,7 +391,7 @@ window.exampleOpenOrder = {
             srcs:exampleProducts[1].srcs
         },
         {
-            id:"ryn19",
+            id:"pn19",
             quantity:25,
             unit:exampleProducts[2].unit,
             price:49.5,
@@ -412,7 +412,7 @@ window.exampleOrderPage = {
 }
 
 window.exampleClientAdmin = {
-    id:"2c4",
+    id:"c2c4",
     cnpj:"12.123.123/0001-12",
     businessName:"1234 Peixaria e Sushi",
     email:"joao@joao.com.br",

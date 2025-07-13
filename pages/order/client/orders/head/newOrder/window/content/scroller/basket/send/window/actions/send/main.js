@@ -22,17 +22,21 @@ export default function send(pdts){
     const send = cE("div", style)
     send.innerHTML = "Concluir"
 
-    let o = {
-            id:1232123,
-            date:"08/07/2025",
-            hour:"17:29",
-            status:"Em andamento",
-            items:pdts
-        }
-
     send.addEventListener(
         "click",
         async function a(e){
+            let o = {
+                id:"134321",
+                date:"Agora",
+                hour:"123",
+                status:"Em andamento",
+                items:pdts
+            }
+
+            //await axios.post(apiURL + "/order/post/newOrder", {items:pdts})
+            //    .then()
+            //    .catch()
+            
             let list = document.getElementById("root").children[0].children[0].children[2].children[1].children[0]
             list.insertBefore(order(o), list.children[0])
 

@@ -19,7 +19,7 @@ export default function submit(){
     submit.innerHTML = "Entrar"
     submit.addEventListener(
         "click",
-        function a(e){
+        async function a(e){
             let signupDiv = e.target.parentElement.parentElement.children[1].children[0].children[0]
             let businessName = signupDiv.children[0]
             let email = signupDiv.children[1]
@@ -51,6 +51,19 @@ export default function submit(){
                     inputError(password)
                 }
                 else{
+                    //// FAzer if para password != "esqueciminhasenha"
+                    //await axios.post(apiURL + "/order/post/userLog", {cnpj:cnpj.value, password:password.value})
+                    //    .then(r => {construct({page:"order", data:r.data})})
+                    //    .catch(r => {
+                    //        if(r.response.status == 404){
+                    //            showWindow("CNPJ não encontrado")
+                    //            inputError(cnpj)
+                    //        }
+                    //        else if(r.response.status == 403){
+                    //            showWindow("Senha incorreta. Digite 'esqueciminhasenha' no campo senha para receber uma temporária pelo email vinculado ao seu CNPJ")
+                    //            inputError(password)
+                    //        }
+                    //    })
                     if(cnpj.value != "12.345.678/0001-00"){
                         showWindow("CNPJ não encontrado")
                         inputError(cnpj)
