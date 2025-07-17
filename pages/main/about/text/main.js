@@ -5,6 +5,7 @@ export default function text(){
             color:var(--colorWhite);
             width:80%;
             margin:7.5vh 0px 0px 0px;
+            text-align:justify;
         }
         :responsive{
             font-size:17px;

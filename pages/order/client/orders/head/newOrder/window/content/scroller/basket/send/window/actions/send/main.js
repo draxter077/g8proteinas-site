@@ -26,9 +26,9 @@ export default function send(pdts){
         "click",
         async function a(e){
             let o = {
-                id:"134321",
-                date:"Agora",
-                hour:"123",
+                id:"od24",
+                date:"17/07/2025",
+                hour:"18:00",
                 status:"Em andamento",
                 items:pdts
             }
