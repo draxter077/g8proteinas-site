@@ -3,6 +3,8 @@ import section from "./section/main.js"
 import all from "./all/main.js"
 import foot from "../common/foot/main.js"
 
+import pdts from "./products.js"
+
 export default function products(id){
     let style = `
         {
@@ -18,8 +20,7 @@ export default function products(id){
 
     const products = cE("div", style)
 
-    let ps = exampleProducts
-    ps = [...ps, ...ps, ...ps, ...ps]
+    let ps = [...pdts, ...pdts, ...pdts, ...pdts]
 
     products.appendChild(head())
     products.appendChild(section("Mais vendidos", [ps[0], ps[1], ps[2], ps[3], ps[4], ps[5], ps[6]]))

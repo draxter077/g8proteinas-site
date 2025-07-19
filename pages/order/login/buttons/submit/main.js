@@ -24,6 +24,7 @@ export default function submit(){
             let businessName = signupDiv.children[0]
             let email = signupDiv.children[1]
             let phoneNumber = signupDiv.children[2]
+            let address = signupDiv.children[3]
             let cnpj = e.target.parentElement.parentElement.children[1].children[1]
             let password = e.target.parentElement.parentElement.children[1].children[2]
 
@@ -82,11 +83,24 @@ export default function submit(){
                 }
             }
             else{
-                if(businessName.value.length == 0 || email.value.length == 0 || phoneNumber.value.length == 0 || cnpj.value.length == 0 || password.value.length == 0 || businessName.value == undefined || email.value == undefined || phoneNumber.value == undefined || cnpj.value == undefined || password.value == undefined){
+                //await axios.post(apiURL + "/order/post/userCreation", {cnpj:cnpj.value, password:password.value ////////////})
+                    //    .then(r => {construct({page:"order", data:r.data})})
+                    //    .catch(r => {
+                    //        if(r.response.status == 404){
+                    //            showWindow("CNPJ não encontrado")
+                    //            inputError(cnpj)
+                    //        }
+                    //        else if(r.response.status == 403){
+                    //            showWindow("Senha incorreta. Digite 'esqueciminhasenha' no campo senha para receber uma temporária pelo email vinculado ao seu CNPJ")
+                    //            inputError(password)
+                    //        }
+                    //    })
+                if(businessName.value.length == 0 || email.value.length == 0 || phoneNumber.value.length == 0 || address.value.length == 0 || cnpj.value.length == 0 || password.value.length == 0 || businessName.value == undefined || email.value == undefined || phoneNumber.value == undefined || address.value == undefined || cnpj.value == undefined || password.value == undefined){
                     showWindow("Preencha todos os campos")
                     inputError(businessName)
                     inputError(email)
                     inputError(phoneNumber)
+                    inputError(address)
                     inputError(cnpj)
                     inputError(password)
                 }

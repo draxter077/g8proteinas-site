@@ -2,7 +2,7 @@ export default function title(t, c){
     let style = `
         {
             font-size:18px;
-            height:70px;
+            height:90px;
             overflow:hidden;
             width:100%;
             color:var(--colorBlack);

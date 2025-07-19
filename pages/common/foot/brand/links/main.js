@@ -14,8 +14,8 @@ export default function links(){
         }`
 
     const links = cE("div", style)
-    links.appendChild(link("./assets/elements/whatsapp.png", ""))
-    links.appendChild(link("./assets/elements/instagram.png", ""))
-    links.appendChild(link("./assets/elements/mail.png", ""))
+    links.appendChild(link("./assets/elements/whatsapp.png", "https://wa.me/4188165618"))
+    links.appendChild(link("./assets/elements/instagram.png", "https://www.instagram.com/g8proteinas"))
+    links.appendChild(link("./assets/elements/mail.png", "mailto:contato@g8proteinas.com.br"))
     return(links)
 }

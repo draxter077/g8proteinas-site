@@ -3,7 +3,7 @@ import scroller from "./scroller/main.js"
 export default function content(id, pdts){
     let style = `
         {
-            height:740px;
+            height:660px;
             width:100%;
             overflow-x:scroll;
         }

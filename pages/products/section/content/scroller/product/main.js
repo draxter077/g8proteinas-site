@@ -1,6 +1,5 @@
 import img from "./img/main.js"
 import title from "./title/main.js"
-import price from "./price/main.js"
 
 import window from "./window/main.js"
 
@@ -10,18 +9,19 @@ export default function product(p){
             display:flex;
             flex-direction:column;
             align-items:center;
-            justify-content:space-between;
-            height:350px;
+            justify-content:space-around;
+            height:300px;
             aspect-ratio:0.65;
             background:var(--colorWhite);
             margin:7px;
             padding:10px;
             border-radius:10px;
+            border-bottom:10px solid var(--colorWhite);
             cursor:pointer;
-            transition:transform 0.5s;
+            transition:border 0.5s;
         }
         :hover{
-            transform:scale(1.02) !important;
+            border-bottom:10px solid var(--colorOrange);
         }
         :responsive{
             height:33svh;
@@ -31,11 +31,10 @@ export default function product(p){
     product.id = p.id
     product.appendChild(img(p.srcs[0]))
     product.appendChild(title(p.title, p.category))
-    product.appendChild(price(p.price, p.unit))
 
     product.addEventListener(
         "click",
-        async function a(){
+        async function a(e){
             let w = window(p)
             document.getElementById("root").appendChild(w)
             await new Promise(resolve => setTimeout(resolve, 100))

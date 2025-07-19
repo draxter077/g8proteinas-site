@@ -13,5 +13,6 @@ export default function content(){
     content.appendChild(input("Nome da empresa"))
     content.appendChild(input("Email"))
     content.appendChild(input("Telefone"))
+    content.appendChild(input("Endereço"))
     return(content)
 }

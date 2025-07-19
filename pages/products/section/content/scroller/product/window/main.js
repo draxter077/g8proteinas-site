@@ -1,7 +1,7 @@
 import head from "./head/main.js"
 import photos from "./photos/main.js"
 import title from "./title/main.js"
-import price from "./price/main.js"
+import observation from "./observation/main.js"
 import button from "./button/main.js"
 
 export default function window(p){
@@ -39,7 +39,7 @@ export default function window(p){
     window.appendChild(head())
     window.appendChild(photos(p.srcs))
     window.appendChild(title(p.title))
-    window.appendChild(price(p.price, p.unit))
+    window.appendChild(observation(p.observation))
     window.appendChild(button())
     return(window)
 }
