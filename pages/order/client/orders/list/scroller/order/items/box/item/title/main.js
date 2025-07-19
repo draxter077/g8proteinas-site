@@ -1,4 +1,4 @@
-export default function title(t, q, p){
+export default function title(t, q, p, s){
     let style = `
         {
             text-align:left;
@@ -16,6 +16,6 @@ export default function title(t, q, p){
         }`
 
     const title = cE("div", style)
-    title.innerHTML = `${q}kg de ${t.split(" - ")[0]}<span>•</span>${stringifyNumber(p*q)}`
+    title.innerHTML = `${q}kg de ${t.split(" - ")[0]}<span>•</span>${stringifyNumber(p*q)}<span>•</span>${s}`
     return(title)
 }

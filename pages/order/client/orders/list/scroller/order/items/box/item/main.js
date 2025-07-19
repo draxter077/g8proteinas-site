@@ -20,7 +20,7 @@ export default function item(i){
 
     const item = cE("div", style)
     item.appendChild(img(i.srcs[0]))
-    item.appendChild(title(i.title, i.quantity, i.price))
+    item.appendChild(title(i.title, i.quantity, i.price, i.status))
     item.addEventListener("click", () => window.open(`/produtos?${i.id}`, "_blank"))
     return(item)
 }

@@ -1,4 +1,4 @@
-export default function window(){
+export default function window(t){
     let style = `
         {
             position:fixed;
@@ -20,6 +20,6 @@ export default function window(){
         }`
 
     const window = cE("div", style)
-    window.innerHTML = "Pedido enviado"
+    window.innerHTML = t
     return(window)
 }

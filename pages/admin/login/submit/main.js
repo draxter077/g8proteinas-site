@@ -20,7 +20,7 @@ export default function submit(){
 
     submit.addEventListener(
         "click",
-        function a(e){
+        async function a(e){
             let user = e.target.parentElement.children[1].children[0]
             let password = e.target.parentElement.children[1].children[1]
             
@@ -47,20 +47,21 @@ export default function submit(){
                 inputError(password)
             }
             else{
-                if(user.value != "keilla"){
-                    showWindow("Usuário não encontrado")
-                    inputError(user)
-                }
-                else if(password.value != "1234"){
-                    showWindow("Senha incorreta")
-                    inputError(password)
-                }
-                else{
-                    construct({page:"admin", data:exampleAdminPage})
-                }
-                // showWindow("Nossos servidores estão em atualização. Aguarde alguns minutos para tentar novamente")
+                await axios.post(apiURL + "/admin/post/adminLog", {user:user.value, password:password.value})
+                    .then(r => {construct({page:"admin", data:r.data})})
+                    .catch(r => {
+                        if(r.response.status == 404){
+                            showWindow("Dados incorretos")
+                            inputError(user)
+                            inputError(password)
+                        }
+                        else{
+                            showWindow("Nossos servidores estão em atualização. Aguarde alguns minutos para tentar novamente")
+                        }
+                    })
             }
         }
     )
+
     return(submit)
 }

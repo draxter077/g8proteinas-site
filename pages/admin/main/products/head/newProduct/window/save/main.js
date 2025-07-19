@@ -25,13 +25,14 @@ export default function save(){
 
     save.addEventListener(
         "click",
-        function a(e){
+        async function a(e){
             let title = e.target.parentElement.children[2].children[0].children[1]
             let category = e.target.parentElement.children[2].children[1].children[1]
             let unit = e.target.parentElement.children[2].children[2].children[1]
             let price = e.target.parentElement.children[2].children[3].children[1]
             let revenue = e.target.parentElement.children[2].children[4].children[1]
-            let supplier = e.target.parentElement.children[2].children[5].children[1]
+            let supplierid = e.target.parentElement.children[2].children[5].children[1]
+            let observation = e.target.parentElement.children[2].children[6].children[1]
 
             async function showWindow(t){
                 let w = window(t)
@@ -44,7 +45,7 @@ export default function save(){
                 document.getElementById("root").removeChild(w)
             }
             
-            if(title.value.length == 0 || category.value.length == 0 || unit.value.length == 0 || price.value.length == 0 || revenue.value.length == 0 || supplier.value.length == 0 || title.value == undefined || category.value == undefined || unit.value == undefined || price.value == undefined || revenue.value == undefined || supplier.value == undefined){
+            if(title.value.length == 0 || category.value.length == 0 || unit.value.length == 0 || price.value.length == 0 || revenue.value.length == 0 || supplierid.value.length == 0 || observation.value.length == 0 || title.value == undefined || category.value == undefined || unit.value == undefined || price.value == undefined || revenue.value == undefined || supplierid.value == undefined || observation.value == undefined){
                 showWindow("Preencha todos os campos")
             }
             else{
@@ -57,20 +58,26 @@ export default function save(){
                 else{
                     price = Math.round(Number(price.value)*100)/100
                     revenue = Math.round(Number(revenue.value)*100)/100
-                    showWindow("Produto salvo pelo ID a76f1")
-                    e.target.parentElement.children[0].children[0].click()
-                    
-                    let p = {
-                        id:"a76f1",
-                        title:title.value,
-                        category:category.value,
-                        price:price,
-                        revenue:revenue,
-                        unit:unit.value,
-                        supplier:supplier.value,
-                        srcs:[]
-                    }
-                    document.getElementById("root").children[0].children[0].children[4].children[2].appendChild(line(p))
+
+                    await axios.post(apiURL + "/admin/post/addProduct", {title:title.value, category:category.value, unit:unit.value, price:price, revenue:revenue, supplierid:supplierid.value, observation:observation.value})
+                        .then(r => {
+                            showWindow("Produto salvo pelo ID " + r.data.id)
+                            e.target.parentElement.children[0].children[0].click()
+
+                            let p = {
+                                id:r.data.id,
+                                title:title.value,
+                                category:category.value,
+                                price:price,
+                                revenue:revenue,
+                                unit:unit.value,
+                                supplierid:supplierid.value,
+                                observation:observation.value,
+                                srcs:[]
+                            }
+                            document.getElementById("root").children[0].children[0].children[4].children[2].appendChild(line(p))
+                        })
+                        .catch(r => alert("Algum problema foi encontrado"))
                 }
             }
         }

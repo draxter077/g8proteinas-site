@@ -18,6 +18,7 @@ export default function info(data){
     info.appendChild(value("Nome da Empresa",data.businessName))
     info.appendChild(value("Email",data.email))
     info.appendChild(value("Telefone",data.phoneNumber))
+    info.appendChild(value("Endereço",data.address))
     info.appendChild(value("Senha",""))
     return(info)
 }

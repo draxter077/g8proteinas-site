@@ -20,6 +20,7 @@ export default function info(p){
     info.appendChild(data("Unidade", p.unit))
     info.appendChild(data("Preço da unidade", p.price))
     info.appendChild(data("Lucro por unidade", p.revenue))
-    info.appendChild(data("Fornecedor", p.supplier))
+    info.appendChild(data("Fornecedor", p.supplierid))
+    info.appendChild(data("Observação", p.observation))
     return(info)
 }

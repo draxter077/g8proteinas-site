@@ -17,6 +17,7 @@ export default function client(log){
 
     const client = cE("div", style)
     console.log(log)
+    
     client.appendChild(head())
     client.appendChild(config(log.user))
     client.appendChild(finance(log.orders))

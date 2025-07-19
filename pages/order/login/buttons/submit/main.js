@@ -52,49 +52,39 @@ export default function submit(){
                     inputError(password)
                 }
                 else{
-                    //// FAzer if para password != "esqueciminhasenha"
-                    //await axios.post(apiURL + "/order/post/userLog", {cnpj:cnpj.value, password:password.value})
-                    //    .then(r => {construct({page:"order", data:r.data})})
-                    //    .catch(r => {
-                    //        if(r.response.status == 404){
-                    //            showWindow("CNPJ não encontrado")
-                    //            inputError(cnpj)
-                    //        }
-                    //        else if(r.response.status == 403){
-                    //            showWindow("Senha incorreta. Digite 'esqueciminhasenha' no campo senha para receber uma temporária pelo email vinculado ao seu CNPJ")
-                    //            inputError(password)
-                    //        }
-                    //    })
-                    if(cnpj.value != "12.345.678/0001-00"){
-                        showWindow("CNPJ não encontrado")
-                        inputError(cnpj)
-                    }
-                    else if(password.value == "esqueciminhasenha"){
-                        showWindow("Uma senha temporária foi enviada para o email vinculado ao seu CNPJ")
-                    }
-                    else if(password.value != "1234"){
-                        showWindow("Senha incorreta. Digite 'esqueciminhasenha' no campo senha para receber uma temporária pelo email vinculado ao seu CNPJ")
-                        inputError(password)
+                    if(password.value == "esqueciminhasenha"){
+                        await axios.post(apiURL + "/order/post/userForgotPassword", {cnpj:cnpj.value})
+                            .then(r => {showWindow("Uma senha temporária foi enviada para o email vinculado ao seu CNPJ")})
+                            .catch(r => {
+                                if(r.response.status == 404){
+                                    showWindow("CNPJ não encontrado")
+                                    inputError(cnpj)
+                                }
+                                else{
+                                    showWindow("Nossos servidores estão em atualização. Aguarde alguns minutos para tentar novamente")
+                                }
+                            })
                     }
                     else{
-                        construct({page:"order", data:exampleOrderPage})
+                        await axios.post(apiURL + "/order/post/userLog", {cnpj:cnpj.value, password:password.value})
+                            .then(r => {construct({page:"order", data:r.data})})
+                            .catch(r => {
+                                if(r.response.status == 404){
+                                    showWindow("CNPJ não encontrado")
+                                    inputError(cnpj)
+                                }
+                                else if(r.response.status == 403){
+                                    showWindow("Senha incorreta. Digite 'esqueciminhasenha' no campo senha para receber uma temporária pelo email vinculado ao seu CNPJ")
+                                    inputError(password)
+                                }
+                                else{
+                                    showWindow("Nossos servidores estão em atualização. Aguarde alguns minutos para tentar novamente")
+                                }
+                            })
                     }
-                    // showWindow("Nossos servidores estão em atualização. Aguarde alguns minutos para tentar novamente")
                 }
             }
             else{
-                //await axios.post(apiURL + "/order/post/userCreation", {cnpj:cnpj.value, password:password.value ////////////})
-                    //    .then(r => {construct({page:"order", data:r.data})})
-                    //    .catch(r => {
-                    //        if(r.response.status == 404){
-                    //            showWindow("CNPJ não encontrado")
-                    //            inputError(cnpj)
-                    //        }
-                    //        else if(r.response.status == 403){
-                    //            showWindow("Senha incorreta. Digite 'esqueciminhasenha' no campo senha para receber uma temporária pelo email vinculado ao seu CNPJ")
-                    //            inputError(password)
-                    //        }
-                    //    })
                 if(businessName.value.length == 0 || email.value.length == 0 || phoneNumber.value.length == 0 || address.value.length == 0 || cnpj.value.length == 0 || password.value.length == 0 || businessName.value == undefined || email.value == undefined || phoneNumber.value == undefined || address.value == undefined || cnpj.value == undefined || password.value == undefined){
                     showWindow("Preencha todos os campos")
                     inputError(businessName)
@@ -105,14 +95,17 @@ export default function submit(){
                     inputError(password)
                 }
                 else{
-                    if(cnpj.value != "12.345.678/0001-00"){
-                        showWindow("CNPJ já vinculado a uma conta")
-                        inputError(cnpj)
-                    }
-                    else{
-                        construct({page:"order", data:exampleOrderPage})
-                    }
-                    // showWindow("Nossos servidores estão em atualização. Aguarde alguns minutos para tentar novamente")
+                    await axios.post(apiURL + "/order/post/userCreation", {cnpj:cnpj.value, businessname:businessName.value, email:email.value, phonenumber:phoneNumber.value, address:address.value, password:password.value})
+                        .then(r => {construct({page:"order", data:r.data})})
+                        .catch(r => {
+                            if(r.response.status == 409){
+                                showWindow("CNPJ já vinculado a uma conta")
+                                inputError(cnpj)
+                            }
+                            else{
+                                showWindow("Nossos servidores estão em atualização. Aguarde alguns minutos para tentar novamente")
+                            }
+                        })
                 }
             }
         }

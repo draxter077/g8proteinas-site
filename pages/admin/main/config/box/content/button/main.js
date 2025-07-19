@@ -23,7 +23,7 @@ export default function button(data){
 
     button.addEventListener(
         "click",
-        function a(e){
+        async function a(e){
             let password = e.target.parentElement.children[0].children[0].children[1].value
 
             async function showWindow(t){
@@ -37,8 +37,10 @@ export default function button(data){
                 document.getElementById("root").removeChild(w)
             }
 
-            if(data.password != password && password != ""){
-                showWindow("Alteração salva")
+            if(password != data.password && password != ""){
+                await axios.post(apiURL + "/admin/post/changeAdminInfo", {password:password})
+                    .then(r => {showWindow("Alteração salva")})
+                    .catch(r => {showWindow("Nossos servidores estão em atualização. Aguarde alguns minutos para tentar novamente")})
             }
         }
     )

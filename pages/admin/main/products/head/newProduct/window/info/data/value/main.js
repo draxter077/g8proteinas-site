@@ -3,7 +3,7 @@ export default function value(v, t){
         {
             font-size:20px;
             color:var(--colorWhite);
-            ${t == "Título" ? "width:40vw;" : "width:150px;"}
+            ${t == "Título" || t == "Observação" ? "width:40vw;" : "width:150px;"}
         }
         ::placeholder{
             font-style:italic;
@@ -12,11 +12,11 @@ export default function value(v, t){
         }
         :responsive{
             font-size:15px;
-            ${t == "Título" ? "width:70vw;" : "width:100px;"}
+            ${t == "Título" || t == "Observação" ? "width:70vw;" : "width:100px;"}
         }`
 
     let elem = "input"
-    if(t == "Título"){elem ="textarea"}
+    if(t == "Título" || t == "Observação"){elem ="textarea"}
     const value = cE(elem, style)
     value.rows = "1"
     value.placeholder = v

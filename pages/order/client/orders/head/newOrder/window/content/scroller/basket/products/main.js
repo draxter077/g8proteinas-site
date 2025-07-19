@@ -16,7 +16,9 @@ export default function products(order){
     if(order != undefined){
         for(let i = 0; i < order.items.length; i++){
             let item = order.items[i]
-            products.appendChild(line(item.id, item.srcs[0], item.title, item.quantity, item.currentPrice))
+            item.price = item.currentPrice
+            item.revenue = item.currentRevenue
+            products.appendChild(line(item, item.quantity))
         }
     }
     return(products)

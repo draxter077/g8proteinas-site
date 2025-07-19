@@ -11,6 +11,6 @@ export default function title(i){
         }`
 
     const title = cE("div", style)
-    title.innerHTML = `${i.id}<span>•</span>${i.quantity}kg de ${i.title}<span>•</span>${stringifyNumber(i.price*i.quantity)} (${stringifyNumber(i.price)}/${i.unit})<span>•</span>${i.supplier}`
+    title.innerHTML = `${i.id}<span>•</span>${i.quantity}kg de ${i.title}<span>•</span>${stringifyNumber(i.price*i.quantity)} (${stringifyNumber(i.price)}/${i.unit})<span>•</span>${i.supplierid}<span>•</span>${i.status}`
     return(title)
 }

@@ -22,14 +22,18 @@ export default function send(o){
     send.addEventListener(
         "click",
         async function a(e){
-            document.getElementById(o.id).style.background = "none"
-            document.getElementById(o.id).style.color = "var(--colorWhite)"
-            document.getElementById(o.id).innerHTML = document.getElementById(o.id).innerHTML.replaceAll("Em andamento", "Concluído")
+            await axios.post(apiURL + "/admin/post/endOrder", {orderID: o.id})
+                .then(r => {
+                    document.getElementById(o.id).style.background = "none"
+                    document.getElementById(o.id).style.color = "var(--colorWhite)"
+                    document.getElementById(o.id).innerHTML = document.getElementById(o.id).innerHTML.replaceAll("Em andamento", "Concluído")
 
-            let closeThis = e.target.parentElement.children[1]
-            closeThis.click()
-            let close = document.getElementById("root").children[1].children[0].children[0]
-            close.click()
+                    let closeThis = e.target.parentElement.children[1]
+                    closeThis.click()
+                    let close = document.getElementById("root").children[1].children[0].children[0]
+                    close.click()
+                })
+                .catch(r => alert("Algum problema foi encontrado"))
         }
     )
 

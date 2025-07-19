@@ -25,35 +25,30 @@ export default function send(pdts){
     send.addEventListener(
         "click",
         async function a(e){
-            let o = {
-                id:"od24",
-                date:"17/07/2025",
-                hour:"18:00",
-                status:"Em andamento",
-                items:pdts
+            async function showWindow(t){
+                let w = window(t)
+                document.getElementById("root").appendChild(w)
+                await new Promise(resolve => setTimeout(resolve, 100))
+                w.style.transform = "translateY(0%)"
+                await new Promise(resolve => setTimeout(resolve, 5000))
+                w.style.transform = "translateY(-200%)"
+                await new Promise(resolve => setTimeout(resolve, 600))
+                document.getElementById("root").removeChild(w)
             }
-            console.log(pdts)
 
-            //await axios.post(apiURL + "/order/post/newOrder", {items:pdts})
-            //    .then()
-            //    .catch()
-            
-            let list = document.getElementById("root").children[0].children[0].children[2].children[1].children[0]
-            list.insertBefore(order(o), list.children[0])
+            await axios.post(apiURL + "/order/post/newOrder", {items:pdts})
+                .then(r => {
+                    let list = document.getElementById("root").children[0].children[0].children[2].children[1].children[0]
+                    list.insertBefore(order(r.data, pdts), list.children[0])
 
-            let closeThis = e.target.parentElement.children[1]
-            closeThis.click()
-            let close = document.getElementById("root").children[1].children[0].children[0]
-            close.click()
+                    let closeThis = e.target.parentElement.children[1]
+                    closeThis.click()
+                    let close = document.getElementById("root").children[1].children[0].children[0]
+                    close.click()
 
-            let w = window()
-            document.getElementById("root").appendChild(w)
-            await new Promise(resolve => setTimeout(resolve, 100))
-            w.style.transform = "translateY(0%)"
-            await new Promise(resolve => setTimeout(resolve, 5000))
-            w.style.transform = "translateY(-200%)"
-            await new Promise(resolve => setTimeout(resolve, 600))
-            document.getElementById("root").removeChild(w)
+                    showWindow("Pedido enviado com sucesso")
+                })
+                .catch(r => showWindow("Nossos servidores estão em atualização. Aguarde alguns minutos para tentar novamente"))
         }
     )
 
