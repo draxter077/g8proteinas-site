@@ -31,12 +31,16 @@ export default function send(){
             let pdts = []
             for(let i = 0; i < products.length; i++){
                 let p = products[i]
-                let id = p.id
-                let src = p.children[0].src
-                let title = p.children[1].innerHTML
-                let quantity = Number(title.split(" ")[0].replaceAll("kg","").replaceAll("unid",""))
-                let price = Number(p.children[2].innerHTML.split("(R$ ")[1].split("/")[0].replaceAll(",","."))
-                pdts.push({id:id, srcs:[src], quantity:quantity, price:price, title:title.split("kg de")[1]})
+                pdts.push(
+                    {
+                        id:p.id,
+                        srcs:[`https://www.g8proteinas.com.br/assets/products/${p.id}_0`],
+                        quantity:p.quantity,
+                        price:p.price,
+                        revenue:p.revenue,
+                        title:p.title
+                    }
+                )
             }
             
             if(pdts.length > 0){

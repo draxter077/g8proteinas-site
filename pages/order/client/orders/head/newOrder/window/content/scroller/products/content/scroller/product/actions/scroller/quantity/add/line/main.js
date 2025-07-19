@@ -3,7 +3,7 @@ import title from "./title/main.js"
 import total from "./total/main.js"
 import cancel from "./cancel/main.js"
 
-export default function line(id, src, t, q, p){
+export default function line(p, q){
     let style = `
         {
             display:flex;
@@ -20,10 +20,16 @@ export default function line(id, src, t, q, p){
         }`
 
     const line = cE("div", style)
-    line.id = id
-    line.appendChild(img(src))
-    line.appendChild(title(t, q))
-    line.appendChild(total(q, p))
+    line.id = p.id
+    line.title = p.title
+    line.quantity = q
+    line.price = p.price
+    line.unit = p.unit
+    line.revenue = p.revenue
+    
+    line.appendChild(img(`https://www.g8proteinas.com.br/assets/products/${p.id}_0`))
+    line.appendChild(title(p.title, q))
+    line.appendChild(total(q, p.price))
     line.appendChild(cancel())
     return(line)
 }

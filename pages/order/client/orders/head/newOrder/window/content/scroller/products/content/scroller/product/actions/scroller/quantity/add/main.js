@@ -24,15 +24,10 @@ export default function add(){
         "click", 
         async function a(e){
             let product = e.target.parentElement.parentElement.parentElement.parentElement
-            let src = product.children[0].src
-            let id = product.id
-            let title = product.children[1].innerHTML
-            let priceInteger = product.children[2].children[0].innerHTML
-            let priceFloat = product.children[2].children[1].innerHTML
-            let quantity = e.target.parentElement.children[0].children[0].value
+            let quantity = Number(e.target.parentElement.children[0].children[0].value)
 
             let basketList = e.target.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.children[1].children[0]
-            basketList.appendChild(line(id, src, title, quantity, Number(`${priceInteger}.${priceFloat}`)))
+            basketList.appendChild(line(product, quantity))
             e.target.parentElement.parentElement.style.transform = "translateX(0%)"
 
             let w = window()

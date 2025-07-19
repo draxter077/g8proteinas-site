@@ -25,6 +25,12 @@ export default function product(p){
 
     const product = cE("div", style)
     product.id = p.id
+    product.title = p.title
+    product.category = p.category
+    product.price = p.price
+    product.unit = p.unit
+    product.revenue = p.revenue
+    
     product.appendChild(img(p.srcs[0]))
     product.appendChild(title(p.title, p.category))
     product.appendChild(price(p.price, p.unit))

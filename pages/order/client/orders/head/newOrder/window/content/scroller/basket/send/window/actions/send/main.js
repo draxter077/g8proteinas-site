@@ -32,6 +32,7 @@ export default function send(pdts){
                 status:"Em andamento",
                 items:pdts
             }
+            console.log(pdts)
 
             //await axios.post(apiURL + "/order/post/newOrder", {items:pdts})
             //    .then()
