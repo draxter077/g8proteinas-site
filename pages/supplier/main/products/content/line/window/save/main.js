@@ -19,19 +19,19 @@ export default function save(p){
             font-size:16px;
         }`
 
-    const save = cE("div", style)
+    const save = cE("button", style)
     save.innerHTML = "Salvar"
 
     save.addEventListener(
         "click",
         async function a(e){
+            e.target.disabled = true
+
             let title = e.target.parentElement.children[2].children[1].children[1]
             let category = e.target.parentElement.children[2].children[2].children[1]
             let unit = e.target.parentElement.children[2].children[3].children[1]
             let price = e.target.parentElement.children[2].children[4].children[1]
-            let revenue = e.target.parentElement.children[2].children[5].children[1]
-            let supplierid = e.target.parentElement.children[2].children[6].children[1]
-            let observation = e.target.parentElement.children[2].children[7].children[1]
+            let observation = e.target.parentElement.children[2].children[5].children[1]
 
             async function showWindow(t){
                 let w = window(t)
@@ -45,9 +45,9 @@ export default function save(p){
             }
 
             price = Math.round(Number(price.value)*100)/100
-            revenue = Math.round(Number(revenue.value)*100)/100
+            observation = observation.value.replaceAll("\n", "<br>")
             
-            if(title.value != p.title || category.value != p.category || unit.value != p.unit || price != p.price || revenue != p.revenue || supplierid.value != p.supplierid || observation.value != p.observation){                
+            if(title.value != p.title || category.value != p.category || unit.value != p.unit || price != p.price || observation != p.observation){                
                 if(category.value != "Peixes" && category.value != "Frutos do mar" && category.value != "Bovinos" && category.value != "Suínos"){
                     showWindow("A categoria deve ser Peixes, Frutos do mar, Bovinos ou Suínos")
                 }
@@ -55,7 +55,7 @@ export default function save(p){
                     showWindow("A unidade deve ser kg ou unid")
                 }
                 else{
-                    await axios.post(apiURL + "/admin/post/changeProductInfo", {id:p.id, title:title.value, category:category.value, unit:unit.value, price:price, revenue:revenue, supplierid:supplierid.value, observation:observation.value.toString().replaceAll("\n", "<br>")})
+                    await axios.post(apiURL + "/supplier/post/changeProductInfo", {id:p.id, title:title.value, category:category.value, unit:unit.value, price:price, observation:observation})
                         .then(r => {
                             showWindow("Alterações salvas. Talvez seja preciso atualizar a página para que as alterações sejam mostradas nessa sessão")
                             e.target.parentElement.children[0].children[0].click()
@@ -63,6 +63,8 @@ export default function save(p){
                         .catch(r => alert("Algum problema foi encontrado"))
                 }
             }
+
+            e.target.disabled = false
         }
     )
     return(save)

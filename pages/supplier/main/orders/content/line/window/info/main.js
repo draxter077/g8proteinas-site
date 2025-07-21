@@ -15,6 +15,7 @@ export default function info(o, total){
     info.appendChild(data("ID", o.id))
     info.appendChild(data("Data e hora", `${o.date} às ${o.hour}`))
     info.appendChild(data("Cliente", `${o.clientcnpj} - ${o.clientname}`))
+    info.appendChild(data("Endereço", `${o.clientaddress}`))
     info.appendChild(data("Nº de itens", o.items.length))
     info.appendChild(data("Total", stringifyNumber(total)))
     return(info)

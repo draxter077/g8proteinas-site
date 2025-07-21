@@ -15,12 +15,14 @@ export default function submit(){
             background:var(--colorOrange);
         }`
 
-    const submit = cE("div", style)
+    const submit = cE("button", style)
     submit.innerHTML = "Entrar"
 
     submit.addEventListener(
         "click",
         async function a(e){
+            e.target.disabled = true
+
             let user = e.target.parentElement.children[1].children[0]
             let password = e.target.parentElement.children[1].children[1]
             
@@ -60,6 +62,8 @@ export default function submit(){
                         }
                     })
             }
+
+            e.target.disabled = false
         }
     )
 

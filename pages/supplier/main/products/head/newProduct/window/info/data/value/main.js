@@ -19,6 +19,7 @@ export default function value(v, t){
     if(t == "Título" || t == "Observação"){elem ="textarea"}
     const value = cE(elem, style)
     value.rows = "1"
+    if(t == "Título" || t == "Observação"){value.rows = "3"}
     value.placeholder = v
     if(t == "Preço da unidade" || t == "Lucro por unidade"){value.type = "number"}
     return(value)

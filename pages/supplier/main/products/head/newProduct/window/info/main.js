@@ -18,8 +18,6 @@ export default function info(){
     info.appendChild(data("Categoria", ""))
     info.appendChild(data("Unidade", "kg/unid"))
     info.appendChild(data("Preço da unidade", "1234,50"))
-    info.appendChild(data("Lucro por unidade", "1234,50"))
-    info.appendChild(data("Fornecedor", "ID"))
     info.appendChild(data("Observação", ""))
     return(info)
 }

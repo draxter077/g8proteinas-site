@@ -1,4 +1,4 @@
-export default function cancel(){
+export default function cancel(btn){
     let style = `
         {
             position:relative;
@@ -35,6 +35,8 @@ export default function cancel(){
             w.style.transform = "scale(0)"
             await new Promise(resolve => setTimeout(resolve, 600))
             document.getElementById("root").removeChild(w)
+
+            btn.disabled = false
         }
     )
     return(cancel)

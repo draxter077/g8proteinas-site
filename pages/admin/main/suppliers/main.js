@@ -1,8 +1,8 @@
 import title from "./title/main.js"
-import head from "./head/main.js"
+import search from "./search/main.js"
 import content from "./content/main.js"
 
-export default function products(pdts){
+export default function supplier(ss){
     let style = `
         {
             display:flex;
@@ -14,9 +14,9 @@ export default function products(pdts){
             width:95%;
         }` 
 
-    const products = cE("div", style)
-    products.appendChild(title())
-    products.appendChild(head())
-    products.appendChild(content(pdts))
-    return(products)
+    const supplier = cE("div", style)
+    supplier.appendChild(title())
+    supplier.appendChild(search())
+    supplier.appendChild(content(ss))
+    return(supplier)
 }

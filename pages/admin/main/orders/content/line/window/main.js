@@ -1,7 +1,6 @@
 import head from "./head/main.js"
 import info from "./info/main.js"
 import items from "./items/main.js"
-import finish from "./finish/main.js"
 
 export default function window(o, total){
     let style = `
@@ -27,7 +26,6 @@ export default function window(o, total){
     const window = cE("div", style)
     window.appendChild(head())
     window.appendChild(info(o, total))
-    window.appendChild(items(o.items))
-    if(o.status == "Em andamento"){window.appendChild(finish(o))}
+    window.appendChild(items(o))
     return(window)
 }

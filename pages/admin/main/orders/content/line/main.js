@@ -1,6 +1,6 @@
 import window from "./window/main.js"
 
-export default function line(o){
+export default function line(o){   
     let style = `
         {
             font-size:18px;
@@ -8,8 +8,8 @@ export default function line(o){
             padding:2px 5px;
             border-bottom:1px solid var(--colorBlue);
             width:100%;
-            ${o.status == "Em andamento" ? "color:var(--colorBlack);" : "color:var(--colorWhite);"}
-            ${o.status == "Em andamento" ? "background:var(--colorYellow);" : ""}
+            ${o.status == "Aguardando confirmação" ? "color:var(--colorBlack);" : "color:var(--colorWhite);"}
+            ${o.status == "Aguardando confirmação" ? "background:var(--colorYellow);" : ""}
             cursor:pointer;
             transition:background 0.25s;
         }
@@ -34,7 +34,13 @@ export default function line(o){
 
     line.addEventListener(
         "click",
-        async function a(){
+        async function a(e){
+            if(e.target.innerHTML.includes("Confirmado")){
+                for(let i = 0; i < o.items.length; i++){
+                    o.items[i].status = "Confirmado"
+                }
+            }
+
             let w = window(o, total)
             document.getElementById("root").appendChild(w)
             await new Promise(resolve => setTimeout(resolve, 100))

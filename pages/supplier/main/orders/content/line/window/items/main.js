@@ -1,6 +1,6 @@
 import item from "./item/main.js"
 
-export default function items(is){
+export default function items(o){
     let style = `
         {
             width:100%;
@@ -9,6 +9,7 @@ export default function items(is){
         }`
 
     const items = cE("div", style)
-    for(let i = 0; i < is.length; i++){items.appendChild(item(is[i]))}
+    let is = o.items
+    for(let i = 0; i < is.length; i++){items.appendChild(item(is[i], o))}
     return(items)
 }

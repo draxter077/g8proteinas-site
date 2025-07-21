@@ -4,6 +4,7 @@ import finance from "./finance/main.js"
 import orders from "./orders/main.js"
 import products from "./products/main.js"
 import clients from "./clients/main.js"
+import suppliers from "./suppliers/main.js"
 import foot from "../../common/foot/main.js"
 
 export default function client(log){
@@ -24,6 +25,7 @@ export default function client(log){
     client.appendChild(orders(log.orders))
     client.appendChild(products(log.products))
     client.appendChild(clients(log.users))
+    client.appendChild(suppliers(log.suppliers))
     client.appendChild(foot())
     return(client)
 }

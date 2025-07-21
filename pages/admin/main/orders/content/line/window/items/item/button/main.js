@@ -1,9 +1,8 @@
 import window from "./window/main.js"
 
-export default function finish(o){
+export default function button(i, o){
     let style = `
         {
-            width:80%;
             font-size:20px;
             text-align:center;
             color:var(--colorWhite);
@@ -20,17 +19,18 @@ export default function finish(o){
             font-size:16px;
         }`
 
-    const finish = cE("div", style)
-    finish.innerHTML = "Concluir pedido"
+    const button = cE("div", style)
+    button.innerHTML = "Confirmar"
 
-    finish.addEventListener(
+    button.addEventListener(
         "click",
-        async function a(){
-            let w = window(o)
+        async function a(e){
+            e.stopPropagation()
+            let w = window(i, o, e.target)
             document.getElementById("root").appendChild(w)
             await new Promise(resolve => setTimeout(resolve, 100))
             w.style.transform = "scale(1)"
         }
     )
-    return(finish)
+    return(button)
 }

@@ -18,12 +18,14 @@ export default function button(data){
             font-size:15px;
         }`
 
-    const button = cE("div", style)
+    const button = cE("button", style)
     button.innerHTML = "Salvar"
 
     button.addEventListener(
         "click",
         async function a(e){
+            e.target.disabled = true
+
             let cnpj = e.target.parentElement.children[0].children[0].children[1].value
             let businessName = e.target.parentElement.children[0].children[1].children[1].value
             let email = e.target.parentElement.children[0].children[2].children[1].value
@@ -48,6 +50,8 @@ export default function button(data){
                     .then(r => {showWindow("Alteração salva")})
                     .catch(r => {showWindow("Nossos servidores estão em atualização. Aguarde alguns minutos para tentar novamente")})
             }
+
+            e.target.disabled = false
         }
     )
     return(button)

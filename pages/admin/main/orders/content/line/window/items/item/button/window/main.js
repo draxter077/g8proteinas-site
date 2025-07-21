@@ -1,7 +1,7 @@
 import info from "./info/main.js"
 import actions from "./actions/main.js"
 
-export default function window(o){
+export default function window(i, o, btn){
     let style = `
         {
             position:fixed;
@@ -29,7 +29,7 @@ export default function window(o){
         }`
 
     const window = cE("div", style)
-    window.appendChild(info(o))
-    window.appendChild(actions(o))
+    window.appendChild(info())
+    window.appendChild(actions(i, o, btn))
     return(window)
 }

@@ -18,12 +18,14 @@ export default function button(data){
             font-size:15px;
         }`
 
-    const button = cE("div", style)
+    const button = cE("button", style)
     button.innerHTML = "Salvar"
 
     button.addEventListener(
         "click",
         async function a(e){
+            e.target.disabled = true
+
             let password = e.target.parentElement.children[0].children[0].children[1].value
 
             async function showWindow(t){
@@ -42,6 +44,8 @@ export default function button(data){
                     .then(r => {showWindow("Alteração salva")})
                     .catch(r => {showWindow("Nossos servidores estão em atualização. Aguarde alguns minutos para tentar novamente")})
             }
+
+            e.target.disabled = false
         }
     )
     return(button)

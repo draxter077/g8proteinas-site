@@ -19,12 +19,14 @@ export default function send(pdts){
             font-size:16px;
         }`
 
-    const send = cE("div", style)
+    const send = cE("button", style)
     send.innerHTML = "Concluir"
 
     send.addEventListener(
         "click",
         async function a(e){
+            e.target.disabled = true
+
             async function showWindow(t){
                 let w = window(t)
                 document.getElementById("root").appendChild(w)
@@ -49,6 +51,8 @@ export default function send(pdts){
                     showWindow("Pedido enviado com sucesso")
                 })
                 .catch(r => showWindow("Nossos servidores estão em atualização. Aguarde alguns minutos para tentar novamente"))
+            
+            e.target.disabled = false
         }
     )
 

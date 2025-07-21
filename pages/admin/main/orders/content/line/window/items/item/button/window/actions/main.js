@@ -1,7 +1,7 @@
 import send from "./send/main.js"
 import cancel from "./cancel/main.js"
 
-export default function actions(o){
+export default function actions(i, o, btn){
     let style = `
         {
             display:flex;
@@ -12,7 +12,7 @@ export default function actions(o){
         }`
 
     const actions = cE("div", style)
-    actions.appendChild(send(o))
+    actions.appendChild(send(i, o, btn))
     actions.appendChild(cancel())
     return(actions)
 }

@@ -15,11 +15,13 @@ export default function submit(){
             background:var(--colorOrange);
         }`
 
-    const submit = cE("div", style)
+    const submit = cE("button", style)
     submit.innerHTML = "Entrar"
     submit.addEventListener(
         "click",
         async function a(e){
+            e.target.disabled = true
+
             let signupDiv = e.target.parentElement.parentElement.children[1].children[0].children[0]
             let businessName = signupDiv.children[0]
             let email = signupDiv.children[1]
@@ -106,6 +108,8 @@ export default function submit(){
                         })
                 }
             }
+            
+            e.target.disabled = false
         }
     )
     return(submit)
