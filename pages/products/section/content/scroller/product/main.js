@@ -35,6 +35,7 @@ export default function product(p){
     product.addEventListener(
         "click",
         async function a(e){
+            window.history.pushState('', '', `/produtos?${p.id}`)
             let w = window(p)
             document.getElementById("root").appendChild(w)
             await new Promise(resolve => setTimeout(resolve, 100))

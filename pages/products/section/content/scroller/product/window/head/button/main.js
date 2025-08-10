@@ -12,6 +12,7 @@ export default function button(){
     button.addEventListener(
         "click",
         async function a(e){
+            window.history.pushState('', '', '/produtos')
             let w = e.target.parentElement.parentElement
             w.style.transform = "translateX(-200%)"
             await new Promise(resolve => setTimeout(resolve, 500))
