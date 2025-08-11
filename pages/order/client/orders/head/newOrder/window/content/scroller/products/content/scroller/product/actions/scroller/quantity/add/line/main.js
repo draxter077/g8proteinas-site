@@ -26,6 +26,7 @@ export default function line(p, q){
     line.price = p.price
     line.unit = p.unit
     line.revenue = p.revenue
+    line.newStock = p.stock - q
     
     line.appendChild(img(`https://www.g8proteinas.com.br/assets/products/${p.id}_0`))
     line.appendChild(title(p.title, q))
