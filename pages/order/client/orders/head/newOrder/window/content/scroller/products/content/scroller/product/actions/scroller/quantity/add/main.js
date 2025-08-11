@@ -1,7 +1,7 @@
 import line from "./line/main.js"
 import window from "./window/main.js"
 
-export default function add(){
+export default function add(s, u){
     let style = `
         {
             height:22px;
@@ -26,18 +26,30 @@ export default function add(){
             let product = e.target.parentElement.parentElement.parentElement.parentElement
             let quantity = Number(e.target.parentElement.children[0].children[0].value)
 
-            let basketList = e.target.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.children[1].children[0]
-            basketList.appendChild(line(product, quantity))
-            e.target.parentElement.parentElement.style.transform = "translateX(0%)"
+            if(quantity <= s){
+                let basketList = e.target.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.children[1].children[0]
+                basketList.appendChild(line(product, quantity))
+                e.target.parentElement.parentElement.style.transform = "translateX(0%)"
 
-            let w = window()
-            document.getElementById("root").appendChild(w)
-            await new Promise(resolve => setTimeout(resolve, 100))
-            w.style.transform = "translateY(0%)"
-            await new Promise(resolve => setTimeout(resolve, 5000))
-            w.style.transform = "translateY(-200%)"
-            await new Promise(resolve => setTimeout(resolve, 600))
-            document.getElementById("root").removeChild(w)
+                let w = window("Adicionado ao carrinho")
+                document.getElementById("root").appendChild(w)
+                await new Promise(resolve => setTimeout(resolve, 100))
+                w.style.transform = "translateY(0%)"
+                await new Promise(resolve => setTimeout(resolve, 5000))
+                w.style.transform = "translateY(-200%)"
+                await new Promise(resolve => setTimeout(resolve, 600))
+                document.getElementById("root").removeChild(w)
+            }
+            else{
+                let w = window(`O estoque do produto está em ${s}${u}`)
+                document.getElementById("root").appendChild(w)
+                await new Promise(resolve => setTimeout(resolve, 100))
+                w.style.transform = "translateY(0%)"
+                await new Promise(resolve => setTimeout(resolve, 5000))
+                w.style.transform = "translateY(-200%)"
+                await new Promise(resolve => setTimeout(resolve, 600))
+                document.getElementById("root").removeChild(w)
+            }
         }
     )
     return(add)

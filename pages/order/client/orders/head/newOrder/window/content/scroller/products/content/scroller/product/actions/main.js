@@ -1,6 +1,6 @@
 import scroller from "./scroller/main.js"
 
-export default function actions(u){
+export default function actions(u, s){
     let style = `
         {
             width:100%;
@@ -8,6 +8,6 @@ export default function actions(u){
         }`
 
     const actions = cE("div", style)
-    actions.appendChild(scroller(u))
+    actions.appendChild(scroller(u, s))
     return(actions)
 }

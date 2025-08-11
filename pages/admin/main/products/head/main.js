@@ -13,6 +13,6 @@ export default function head(){
 
     const head = cE("div", style)
     head.appendChild(search())
-    head.appendChild(newProduct())
+    //head.appendChild(newProduct())
     return(head)
 }

@@ -37,7 +37,7 @@ export default function send(){
                         srcs:[`https://www.g8proteinas.com.br/assets/products/${p.id}_0`],
                         quantity:p.quantity,
                         price:p.price,
-                        revenue:p.revenue,
+                        revenue:Math.round(p.revenue*p.price*100)/100,
                         title:p.title
                     }
                 )
