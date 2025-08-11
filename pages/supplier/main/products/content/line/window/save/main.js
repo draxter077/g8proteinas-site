@@ -30,8 +30,9 @@ export default function save(p){
             let title = e.target.parentElement.children[2].children[1].children[1]
             let category = e.target.parentElement.children[2].children[2].children[1]
             let unit = e.target.parentElement.children[2].children[3].children[1]
-            let price = e.target.parentElement.children[2].children[4].children[1]
-            let observation = e.target.parentElement.children[2].children[5].children[1]
+            let stock = e.target.parentElement.children[2].children[4].children[1]
+            let price = e.target.parentElement.children[2].children[5].children[1]
+            let observation = e.target.parentElement.children[2].children[6].children[1]
 
             async function showWindow(t){
                 let w = window(t)
@@ -45,9 +46,10 @@ export default function save(p){
             }
 
             price = Math.round(Number(price.value)*100)/100
+            stock = Math.round(Number(stock.value)*100)/100
             observation = observation.value.replaceAll("\n", "<br>")
             
-            if(title.value != p.title || category.value != p.category || unit.value != p.unit || price != p.price || observation != p.observation){                
+            if(title.value != p.title || category.value != p.category || unit.value != p.unit || price != p.price || observation != p.observation || stock != p.stock){                
                 if(category.value != "Peixes" && category.value != "Frutos do mar" && category.value != "Bovinos" && category.value != "Suínos"){
                     showWindow("A categoria deve ser Peixes, Frutos do mar, Bovinos ou Suínos")
                 }
@@ -55,7 +57,7 @@ export default function save(p){
                     showWindow("A unidade deve ser kg ou unid")
                 }
                 else{
-                    await axios.post(apiURL + "/supplier/post/changeProductInfo", {id:p.id, title:title.value, category:category.value, unit:unit.value, price:price, observation:observation})
+                    await axios.post(apiURL + "/supplier/post/changeProductInfo", {id:p.id, title:title.value, category:category.value, unit:unit.value, stock:stock, price:price, observation:observation})
                         .then(r => {
                             showWindow("Alterações salvas. Talvez seja preciso atualizar a página para que as alterações sejam mostradas nessa sessão")
                             e.target.parentElement.children[0].children[0].click()

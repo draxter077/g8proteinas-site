@@ -17,6 +17,7 @@ export default function info(){
     info.appendChild(data("Título", ""))
     info.appendChild(data("Categoria", ""))
     info.appendChild(data("Unidade", "kg/unid"))
+    info.appendChild(data("Estoque", "1234,50"))
     info.appendChild(data("Preço da unidade", "1234,50"))
     info.appendChild(data("Observação", ""))
     return(info)

@@ -31,8 +31,9 @@ export default function save(){
             let title = e.target.parentElement.children[2].children[0].children[1]
             let category = e.target.parentElement.children[2].children[1].children[1]
             let unit = e.target.parentElement.children[2].children[2].children[1]
-            let price = e.target.parentElement.children[2].children[3].children[1]
-            let observation = e.target.parentElement.children[2].children[4].children[1]
+            let stock = e.target.parentElement.children[2].children[3].children[1]
+            let price = e.target.parentElement.children[2].children[4].children[1]
+            let observation = e.target.parentElement.children[2].children[5].children[1]
 
             async function showWindow(t){
                 let w = window(t)
@@ -45,7 +46,7 @@ export default function save(){
                 document.getElementById("root").removeChild(w)
             }
             
-            if(title.value.length == 0 || category.value.length == 0 || unit.value.length == 0 || price.value.length == 0 || observation.value.length == 0 || title.value == undefined || category.value == undefined || unit.value == undefined || price.value == undefined || observation.value == undefined){
+            if(title.value.length == 0 || category.value.length == 0 || unit.value.length == 0 || stock.value.length == 0 || price.value.length == 0 || observation.value.length == 0 || title.value == undefined || category.value == undefined || unit.value == undefined || stock.value == undefined || price.value == undefined || observation.value == undefined){
                 showWindow("Preencha todos os campos")
             }
             else{
@@ -57,9 +58,10 @@ export default function save(){
                 }
                 else{
                     price = Math.round(Number(price.value)*100)/100
+                    stock = Math.round(Number(stock.value)*100)/100
                     observation = observation.value.replaceAll("\n", "<br>")
 
-                    await axios.post(apiURL + "/supplier/post/addProduct", {title:title.value, category:category.value, unit:unit.value, price:price, observation:observation})
+                    await axios.post(apiURL + "/supplier/post/addProduct", {title:title.value, category:category.value, unit:unit.value, stock:stock, price:price, observation:observation})
                         .then(r => {
                             showWindow("Produto salvo pelo ID " + r.data.id)
                             e.target.parentElement.children[0].children[0].click()
@@ -68,6 +70,7 @@ export default function save(){
                                 title:title.value,
                                 category:category.value,
                                 price:price,
+                                stock:stock,
                                 unit:unit.value,
                                 observation:observation,
                                 srcs:[]

@@ -25,7 +25,7 @@ export default function line(p){
         }`
 
     const line = cE("div", style)
-    line.innerHTML = `${p.id}<span>•</span>${p.title}<span>•</span>${p.category}<span>•</span>${stringifyNumber(p.price)}`
+    line.innerHTML = `${p.id}<span>•</span>${p.title}<span>•</span>${p.category}<span>•</span>${p.stock} ${p.unit}<span>•</span>${stringifyNumber(p.price)}`
 
     line.addEventListener(
         "click",
