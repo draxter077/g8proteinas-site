@@ -1,6 +1,5 @@
 import img from "./img/main.js"
 import title from "./title/main.js"
-import button from "./button/main.js"
 
 export default function item(i, o){
     let style = `
@@ -26,6 +25,5 @@ export default function item(i, o){
     item.appendChild(img(i.srcs[0]))
     item.appendChild(title(i))
     item.addEventListener("click", () => window.open(`/produtos?${i.id}`, "_blank"))
-    if(i.status == "Aguardando confirmação"){item.appendChild(button(i, o))}
     return(item)
 }

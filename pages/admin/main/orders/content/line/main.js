@@ -35,12 +35,6 @@ export default function line(o){
     line.addEventListener(
         "click",
         async function a(e){
-            if(e.target.innerHTML.includes("Confirmado")){
-                for(let i = 0; i < o.items.length; i++){
-                    o.items[i].status = "Confirmado"
-                }
-            }
-
             let w = window(o, total)
             document.getElementById("root").appendChild(w)
             await new Promise(resolve => setTimeout(resolve, 100))

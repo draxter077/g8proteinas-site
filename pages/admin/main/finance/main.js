@@ -23,7 +23,7 @@ export default function finance(orders){
         let items = o.items
         for(let k = 0; k < items.length; k++){
             sales += items[k].price*items[k].quantity
-            revenue += items[k].revenue*items[k].quantity
+            revenue += items[k].revenue*items[k].price*items[k].quantity
         }
     }
 

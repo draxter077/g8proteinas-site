@@ -38,7 +38,7 @@ export default function save(p){
                 document.getElementById("root").removeChild(w)
             }
 
-            revenue = (Math.round(Number(revenue.value.replaceAll("%","").replaceAll(",","."))*100)/100)/10000
+            revenue = (Math.round(Number(revenue.value.replaceAll("%","").replaceAll(",",".").replaceAll(" ",""))*100)/100)/10000
             
             if(revenue != p.revenue){                
                 await axios.post(apiURL + "/admin/post/changeProductInfo", {revenue:revenue})

@@ -21,7 +21,7 @@ export default function value(v, t){
     value.rows = "1"
     if(t == "Título" || t == "Observação"){value.rows = "3"}
     value.value = v
-    if(t == "Preço da unidade" || t == "Lucro por unidade"){value.type = "number"}
+    if(t == "Preço da unidade" || t == "Estoque"){value.type = "number"}
     else if(t == "ID"){value.disabled = true}
     return(value)
 }

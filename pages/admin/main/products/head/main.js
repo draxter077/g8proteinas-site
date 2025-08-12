@@ -1,5 +1,4 @@
 import search from "./search/main.js"
-import newProduct from "./newProduct/main.js"
 
 export default function head(){
     let style = `
@@ -13,6 +12,5 @@ export default function head(){
 
     const head = cE("div", style)
     head.appendChild(search())
-    //head.appendChild(newProduct())
     return(head)
 }

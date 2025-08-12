@@ -38,7 +38,7 @@ export default function send(){
                         quantity:p.quantity,
                         price:p.price,
                         newStock: p.newStock,
-                        revenue:Math.round(p.revenue*p.price*100)/100,
+                        revenue:p.revenue,
                         title:p.title
                     }
                 )
