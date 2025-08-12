@@ -21,8 +21,10 @@ export default function finance(orders){
     for(let i = 0; i < orders.length; i++){
         let o = orders[i]
         let items = o.items
-        for(let k = 0; k < items.length; k++){
-            sales += items[k].price*items[k].quantity
+        if(o.date.slice(3,10) == monthYear){
+            for(let k = 0; k < items.length; k++){
+                sales += items[k].price*items[k].quantity
+            }
         }
     }
 

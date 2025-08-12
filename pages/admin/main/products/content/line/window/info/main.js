@@ -22,6 +22,6 @@ export default function info(p){
     info.appendChild(data("Margem de lucro", p.revenue*100 + "%"))
     info.appendChild(data("Fornecedor", p.supplierid))
     info.appendChild(data("Estoque", p.stock))
-    info.appendChild(data("Observação", p.observation))
+    info.appendChild(data("Observação", p.observation.replaceAll("<br>","\n")))
     return(info)
 }

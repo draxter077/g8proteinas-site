@@ -14,7 +14,6 @@ export default function content(pdts){
         }`
 
     const content = cE("div", style)
-    pdts = [...pdts, ...pdts, ...pdts]
     for(let i = 0; i < pdts.length; i++){content.appendChild(line(pdts[i]))}
     return(content)
 }

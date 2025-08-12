@@ -10,6 +10,6 @@ export default function scroller(orders, pdts){
         }`
 
     const scroller = cE("div", style)
-    for(let i = 0; i < orders.length; i++){scroller.appendChild(order(orders[i], pdts))}
+    for(let i = orders.length - 1; i >= 0; i--){scroller.appendChild(order(orders[i], pdts))}
     return(scroller)
 }

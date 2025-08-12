@@ -41,7 +41,7 @@ export default function save(p){
             revenue = (Math.round(Number(revenue.value.replaceAll("%","").replaceAll(",",".").replaceAll(" ",""))*100)/100)/10000
             
             if(revenue != p.revenue){                
-                await axios.post(apiURL + "/admin/post/changeProductInfo", {revenue:revenue})
+                await axios.post(apiURL + "/admin/post/changeProductInfo", {id:p.id, revenue:revenue})
                     .then(r => {
                         showWindow("Alterações salvas. Talvez seja preciso atualizar a página para que as alterações sejam mostradas nessa sessão")
                         e.target.parentElement.children[0].children[0].click()

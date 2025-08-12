@@ -33,7 +33,7 @@ export default function product(p){
     product.stock = p.stock
     
     product.appendChild(img(p.srcs[0]))
-    product.appendChild(title(p.title, p.category))
+    product.appendChild(title(p.title, p.category, p.id))
     product.appendChild(price(p.price, p.unit))
     product.appendChild(actions(p.unit, p.stock))
     return(product)

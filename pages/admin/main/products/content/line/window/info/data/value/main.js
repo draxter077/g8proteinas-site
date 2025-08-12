@@ -3,7 +3,7 @@ export default function value(v, t){
         {
             font-size:20px;
             color:var(--colorWhite);
-            width:150px;
+            ${t == "Título" || t == "Observação" ? "width:40vw;" : "width:150px;"}
         }
         ::placeholder{
             font-style:italic;
@@ -12,11 +12,16 @@ export default function value(v, t){
         }
         :responsive{
             font-size:15px;
-            width:100px;
+            ${t == "Título" || t == "Observação" ? "width:70vw;" : "width:100px;"}
         }`
 
-    const value = cE("input", style)
+    let elem = "input"
+    if(t == "Título" || t == "Observação"){elem ="textarea"}
+    const value = cE(elem, style)
+    value.rows = "1"
+    if(t == "Título" || t == "Observação"){value.rows = "3"}
     value.value = v
+    if(t == "Preço da unidade" || t == "Estoque"){value.type = "number"}
     if(t != "Margem de lucro"){value.disabled = true}
     return(value)
 }

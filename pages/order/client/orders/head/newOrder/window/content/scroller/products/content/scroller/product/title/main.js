@@ -1,4 +1,4 @@
-export default function title(t, c){
+export default function title(t, c, i){
     let style = `
         {
             font-size:18px;
@@ -8,6 +8,7 @@ export default function title(t, c){
             color:var(--colorBlack);
             padding:5px 0px;
             border-top:1px solid var(--colorOrange);
+            cursor:pointer;
         }
         :responsive{
             font-size:15px;
@@ -16,5 +17,6 @@ export default function title(t, c){
 
     const title = cE("div", style)
     title.innerHTML = t + " - " + c
+    title.addEventListener("click", () => window.open(`/produtos?${i}`, "_blank"))
     return(title)
 }
