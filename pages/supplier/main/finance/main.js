@@ -15,7 +15,10 @@ export default function finance(orders){
         }`
 
     const finance = cE("div", style)
-    let monthYear = orders[orders.length - 1].date.slice(3,10)
+    let monthYear = "00/00"
+    if(orders.length > 0){
+        monthYear = orders[orders.length - 1].date.slice(3,10)
+    }
 
     let sales = 0
     for(let i = 0; i < orders.length; i++){
