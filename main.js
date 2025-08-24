@@ -156,7 +156,7 @@ window.construct = function construct(p){
             }
         }
         else{
-            root.appendChild(supplier())
+            root.appendChild(main())
         }
     }
     else{
