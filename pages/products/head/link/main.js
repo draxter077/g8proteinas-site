@@ -25,8 +25,9 @@ export default function link(t, url){
             font-size:17px;
         }`
 
-    const link = cE("div", style)
+    const link = cE("a", style)
+    link.href = `https://www.g8proteinas.com.br${url}`
+    link.target = "_self"
     link.innerHTML = t
-    link.addEventListener("click", () => window.open(url, "_self"))
     return(link)
 }

@@ -50,8 +50,8 @@ export default function save(){
                 showWindow("Preencha todos os campos")
             }
             else{
-                if(category.value != "Peixes" && category.value != "Frutos do mar" && category.value != "Bovinos" && category.value != "Suínos"){
-                    showWindow("A categoria deve ser Peixes, Frutos do mar, Bovinos ou Suínos")
+                if(category.value != "Peixes" && category.value != "Frutos do mar" && category.value != "Bovinos" && category.value != "Suínos" && category.value != "Veganos" && category.value != "Ovinos" && category.value != "Frangos"){
+                    showWindow("A categoria deve ser Peixes, Frutos do mar, Bovinos, Suínos, Veganos, Ovinos ou Frangos")
                 }
                 else if(unit.value != "kg" && unit.value != "unid"){
                     showWindow("A unidade deve ser kg ou unid")

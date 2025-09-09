@@ -50,8 +50,8 @@ export default function save(p){
             observation = observation.value.replaceAll("\n", "<br>")
             
             if(title.value != p.title || category.value != p.category || unit.value != p.unit || price != p.price || observation != p.observation || stock != p.stock){                
-                if(category.value != "Peixes" && category.value != "Frutos do mar" && category.value != "Bovinos" && category.value != "Suínos"){
-                    showWindow("A categoria deve ser Peixes, Frutos do mar, Bovinos ou Suínos")
+                if(category.value != "Peixes" && category.value != "Frutos do mar" && category.value != "Bovinos" && category.value != "Suínos" && category.value != "Veganos" && category.value != "Ovinos" && category.value != "Frangos"){
+                    showWindow("A categoria deve ser Peixes, Frutos do mar, Bovinos, Suínos, Veganos, Ovinos ou Frangos")
                 }
                 else if(unit.value != "kg" && unit.value != "unid"){
                     showWindow("A unidade deve ser kg ou unid")

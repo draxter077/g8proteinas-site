@@ -12,5 +12,8 @@ export default function categories(){
     categories.appendChild(category("./assets/elements/shrimp.png", "Frutos do mar"))
     categories.appendChild(category("./assets/elements/cow.png", "Bovinos"))
     categories.appendChild(category("./assets/elements/pig.png", "Suínos"))
+    categories.appendChild(category("./assets/elements/vegan.png", "Veganos"))
+    categories.appendChild(category("./assets/elements/sheep.png", "Ovinos"))
+    categories.appendChild(category("./assets/elements/chicken.png", "Frangos"))
     return(categories)
 }

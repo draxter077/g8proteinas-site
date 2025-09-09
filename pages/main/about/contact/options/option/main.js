@@ -21,10 +21,10 @@ export default function option(src, url, t){
             width:40%;
         }`
 
-    const option = cE("div", style)
+    const option = cE("a", style)
+    option.href = url
+    option.target = "_blank"
     option.appendChild(img(src))
     option.appendChild(title(t))
-
-    option.addEventListener("click", () => window.open(url, "_blank"))
     return(option)
 }

@@ -18,8 +18,9 @@ export default function button(){
             font-size:16px;
         }`
 
-    const button = cE("div", style)
+    const button = cE("a", style)
+    button.href = "https://www.g8proteinas.com.br/produtos"
+    button.target = "_self"
     button.innerHTML = "Conheça todos os nossos produtos"
-    button.addEventListener("click", () => window.open("/produtos", "_self"))
     return(button)
 }
