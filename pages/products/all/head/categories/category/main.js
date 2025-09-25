@@ -15,6 +15,7 @@ export default function category(src, t){
         }
         :responsive{
             height:40px;
+            margin:5px;
         }`
 
     const category = cE("img", style)

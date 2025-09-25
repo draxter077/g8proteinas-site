@@ -47,10 +47,10 @@ export default function input(ph){
                     if(i == 0){nS += "("}
                     nS += c
                     if(i != v.length - 1){
-                        if(i == 2){nS += ") "}
-                        else if(i == 7){nS += "-"}
+                        if(i == 1){nS += ") "}
+                        else if(i == 6){nS += "-"}
                     }
-                    if(i > 11){break}
+                    if(i > 10){break}
                     e.target.value = nS
                 }
             }

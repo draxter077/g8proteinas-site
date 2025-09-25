@@ -5,6 +5,10 @@ export default function categories(){
         {
             display:flex;
             flex-direction:row;
+        }
+        :responsive{
+            width:95%;
+            flex-wrap:wrap;
         }`
 
     const categories = cE("div", style)

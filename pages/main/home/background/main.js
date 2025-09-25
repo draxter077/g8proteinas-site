@@ -17,10 +17,12 @@ export default function background(){
             background:var(--colorOrange);
             z-index:-1;
 
-            animation:backgroundScroll 1s linear 0s 1 forwards;
+            animation-name:backgroundScroll;
+            animation-direction:forwards;
             animation-timeline:scroll();
             animation-range-start:0%;
             animation-range-end:100svh;
+            animation-duration:1ms;
         }
         @keyframes backgroundScroll{
             0%[opacity:1;transform:scale(1)]
